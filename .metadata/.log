@@ -109,3 +109,6 @@ Command-line arguments:  -data /home/frank/thesis_ws -os linux -ws gtk -arch x86
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-06-03 12:07:41.670
 !MESSAGE Indexed 'GETjag_bms' (28 sources, 94 headers) in 2.37 sec: 6,353 declarations; 35,399 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0048%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-06-03 13:29:09.947
+!MESSAGE Indexed 'GETjag_bms' (36 sources, 114 headers) in 1.31 sec: 8,614 declarations; 45,256 references; 0 unresolved inclusions; 109 syntax errors; 1 unresolved names (0.0019%)

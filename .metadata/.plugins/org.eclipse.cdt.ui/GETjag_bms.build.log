@@ -1,10 +1,16 @@
-12:07:46 **** Incremental Build of configuration Debug for project GETjag_bms ****
+13:59:57 **** Incremental Build of configuration Debug for project GETjag_bms ****
 make -j16 all 
+arm-none-eabi-gcc -o "GETjag_bms.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/GETjag_bms/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GETjag_bms.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GETjag_bms.elf
+ 
 arm-none-eabi-size  GETjag_bms.elf 
+arm-none-eabi-objdump -h -S GETjag_bms.elf  > "GETjag_bms.list"
    text	   data	    bss	    dec	    hex	filename
-  26352	    312	   2424	  29088	   71a0	GETjag_bms.elf
+  37924	    320	  79728	 117972	  1ccd4	GETjag_bms.elf
 Finished building: default.size.stdout
  
+Finished building: GETjag_bms.list
+ 
 
-12:07:46 Build Finished. 0 errors, 0 warnings. (took 185ms)
+13:59:58 Build Finished. 0 errors, 0 warnings. (took 291ms)
 

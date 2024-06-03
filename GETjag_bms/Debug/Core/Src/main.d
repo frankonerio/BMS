@@ -25,12 +25,23 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
+ /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
+ /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/modbus.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/socket.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500/w5500.h \
- /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h
+ /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/mpu_wrappers.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h
 ../Core/Inc/main.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -58,6 +69,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
+/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
+/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/spi.h:
 ../Core/Inc/main.h:
@@ -66,3 +79,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h:
 /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500/w5500.h:
 /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/mpu_wrappers.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h:

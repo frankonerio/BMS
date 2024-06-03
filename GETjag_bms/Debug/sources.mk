@@ -27,4 +27,7 @@ Core/Src/w5500/W5500 \
 Core/Src/w5500 \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver \
+Middleware/FreeRTOS \
+Middleware/FreeRTOS/portable/GCC/ARM_CM4F \
+Middleware/FreeRTOS/portable/MemMang \
 

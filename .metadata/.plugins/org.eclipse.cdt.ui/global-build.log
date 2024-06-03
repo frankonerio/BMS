@@ -1,7 +1,51 @@
-12:07:46 **** Incremental Build of configuration Debug for project GETjag_bms ****
+13:59:33 **** Incremental Build of configuration Debug for project GETjag_bms ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500" -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:250:3: warning: implicit declaration of function 'PHYStatusCheck' [-Wimplicit-function-declaration]
+  250 |   PHYStatusCheck();
+      |   ^~~~~~~~~~~~~~
+../Core/Src/main.c:251:3: warning: implicit declaration of function 'PrintPHYConf' [-Wimplicit-function-declaration]
+  251 |   PrintPHYConf();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_SYSTICK_Callback':
+../Core/Src/main.c:552:3: warning: implicit declaration of function 'DelayIncCnt' [-Wimplicit-function-declaration]
+  552 |   DelayIncCnt();
+      |   ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:612:6: warning: conflicting types for 'PHYStatusCheck'; have 'void(void)'
+  612 | void PHYStatusCheck(void)
+      |      ^~~~~~~~~~~~~~
+../Core/Src/main.c:250:3: note: previous implicit declaration of 'PHYStatusCheck' with type 'void(void)'
+  250 |   PHYStatusCheck();
+      |   ^~~~~~~~~~~~~~
+../Core/Src/main.c:632:6: warning: conflicting types for 'PrintPHYConf'; have 'void(void)'
+  632 | void PrintPHYConf(void)
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:251:3: note: previous implicit declaration of 'PrintPHYConf' with type 'void(void)'
+  251 |   PrintPHYConf();
+      |   ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "GETjag_bms.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/GETjag_bms/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GETjag_bms.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GETjag_bms.elf
+ 
 arm-none-eabi-size  GETjag_bms.elf 
+arm-none-eabi-objdump -h -S GETjag_bms.elf  > "GETjag_bms.list"
    text	   data	    bss	    dec	    hex	filename
-  26352	    312	   2424	  29088	   71a0	GETjag_bms.elf
+  37924	    320	  79728	 117972	  1ccd4	GETjag_bms.elf
 Finished building: default.size.stdout
+ 
+Finished building: GETjag_bms.list
+ 
+13:59:57 **** Incremental Build of configuration Debug for project GETjag_bms ****
+make -j16 all 
+arm-none-eabi-gcc -o "GETjag_bms.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/GETjag_bms/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GETjag_bms.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GETjag_bms.elf
+ 
+arm-none-eabi-size  GETjag_bms.elf 
+arm-none-eabi-objdump -h -S GETjag_bms.elf  > "GETjag_bms.list"
+   text	   data	    bss	    dec	    hex	filename
+  37924	    320	  79728	 117972	  1ccd4	GETjag_bms.elf
+Finished building: default.size.stdout
+ 
+Finished building: GETjag_bms.list
  

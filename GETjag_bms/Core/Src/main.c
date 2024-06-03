@@ -30,6 +30,8 @@
 #include <string.h>
 #include "socket.h"
 #include "wizchip_conf.h"
+#include "FreeRTOS.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -138,6 +140,9 @@ uint16_t holding_register[64] = {
     33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
     49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63};
 
+TaskHandle_t task1_handle;
+BaseType_t status;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -155,6 +160,8 @@ uint8_t wizchip_read();
 // Initialize Network information and display it
 void network_init(void);
 
+
+static void task1_handler(void* parameters);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -179,6 +186,10 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  status = xTaskCreate(task1_handler, "Task-1", 200, "Hello world from Task-1", 2, &task1_handle);
+  configASSERT(status==pdPASS);
+
+  //status = xTaskCreate(pxTaskCode, pcName, usStackDepth, pvParameters, uxPriority, pxCreatedTask);
 
   /* USER CODE END Init */
 
@@ -195,6 +206,7 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
+  vTaskStartScheduler();
   /* Chip selection call back */
 
   HAL_GPIO_WritePin(GPIO_W5500_RESET_GPIO_Port, GPIO_W5500_RESET_Pin, GPIO_PIN_RESET);
@@ -528,6 +540,14 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+static void task1_handler(void* parameters)
+{
+	while(1){
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+		HAL_Delay(100);
+	}
+
+}
 void HAL_SYSTICK_Callback()
 {
   DelayIncCnt();
@@ -670,6 +690,27 @@ void PrintPHYConf(void)
 // 200  -  SUCCESS_RECEIVE
 
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM6 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM6) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.
