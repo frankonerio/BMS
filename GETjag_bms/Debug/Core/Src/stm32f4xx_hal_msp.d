@@ -28,7 +28,21 @@ Core/Src/stm32f4xx_hal_msp.o: ../Core/Src/stm32f4xx_hal_msp.c \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/Global.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_RTT_Conf.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/mpu_wrappers.h
 ../Core/Inc/main.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -59,3 +73,17 @@ Core/Src/stm32f4xx_hal_msp.o: ../Core/Src/stm32f4xx_hal_msp.c \
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/Global.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_RTT_Conf.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/mpu_wrappers.h:

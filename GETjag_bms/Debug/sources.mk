@@ -30,4 +30,8 @@ Drivers/STM32F4xx_HAL_Driver \
 Middleware/FreeRTOS \
 Middleware/FreeRTOS/portable/GCC/ARM_CM4F \
 Middleware/FreeRTOS/portable/MemMang \
+Middleware/SEGGER/Config \
+Middleware/SEGGER/OS \
+Middleware/SEGGER/SEGGER \
+Middleware/SEGGER/SEGGER/Syscalls \
 

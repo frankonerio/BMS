@@ -1,0 +1,40 @@
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/frank/thesis/gui_ws/src/bms_gui/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/frank/thesis/gui_ws/build/bms_gui
+[ 11%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:[m[K In constructor ‘[01m[KRos2Comm::Ros2Comm()[m[K’:
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:22:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_registers[m[K’ was not declared in this scope
+   22 |     [01;31m[Kread_registers[m[K = true;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_registers[m[K’ was not declared in this scope
+   60 |     if ([01;31m[Kread_registers[m[K == true)
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

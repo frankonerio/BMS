@@ -1,6 +1,13 @@
 Middleware/FreeRTOS/list.o: ../Middleware/FreeRTOS/list.c \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/Global.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_RTT_Conf.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h \
@@ -9,6 +16,13 @@ Middleware/FreeRTOS/list.o: ../Middleware/FreeRTOS/list.c \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/FreeRTOS.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/FreeRTOSConfig.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/Global.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config/SEGGER_RTT_Conf.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/projdefs.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/portable.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/deprecated_definitions.h:

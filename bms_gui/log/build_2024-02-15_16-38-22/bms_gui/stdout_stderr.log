@@ -1,0 +1,19 @@
+[ 11%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[ 77%] [32m[1mLinking CXX executable bms_gui[0m
+/usr/bin/ld: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+/usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:274: bms_gui] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

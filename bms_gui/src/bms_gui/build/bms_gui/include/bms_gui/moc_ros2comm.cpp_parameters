@@ -1,0 +1,8 @@
+-I/usr/local/include/modbus
+-I/home/frank/thesis/gui_ws/src/bms_gui/include
+-I/home/frank/thesis/gui_ws/src/bms_gui/build/bms_gui
+-I/home/frank/thesis/gui_ws/src/bms_gui
+-I/home/frank/thesis/gui_ws/src/bms_gui/build/bms_gui
+-o
+/home/frank/thesis/gui_ws/src/bms_gui/build/bms_gui/include/bms_gui/moc_ros2comm.cpp
+/home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/ros2comm.h

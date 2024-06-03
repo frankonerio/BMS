@@ -1,0 +1,11 @@
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:[m[K In constructor ‘[01m[KRos2Comm::Ros2Comm()[m[K’:
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:22:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_registers[m[K’ was not declared in this scope
+   22 |     [01;31m[Kread_registers[m[K = true;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[01m[K/home/frank/thesis/gui_ws/src/bms_gui/src/ros2comm.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_registers[m[K’ was not declared in this scope
+   60 |     if ([01;31m[Kread_registers[m[K == true)
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

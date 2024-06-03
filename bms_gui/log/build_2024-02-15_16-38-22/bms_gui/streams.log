@@ -1,0 +1,21 @@
+[0.032s] Invoking command in '/home/frank/thesis/gui_ws/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis/gui_ws/build/bms_gui -- -j16 -l16
+[0.047s] [ 11%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[0.071s] [ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.072s] [ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.072s] [ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[0.073s] [ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[0.073s] [ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[4.949s] [ 77%] [32m[1mLinking CXX executable bms_gui[0m
+[4.956s] /usr/bin/ld: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+[4.956s] /usr/bin/ld: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+[4.961s] /usr/bin/ld: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+[4.961s] /usr/bin/ld: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+[4.962s] /usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+[4.962s] /usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+[4.962s] /usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o:(.bss+0x0): multiple definition of `read_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x0): first defined here
+[4.962s] /usr/bin/ld: CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o:(.bss+0x1): multiple definition of `configure_registers'; CMakeFiles/bms_gui.dir/src/main.cpp.o:(.bss+0x1): first defined here
+[5.378s] collect2: error: ld returned 1 exit status
+[5.379s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:274: bms_gui] Error 1
+[5.379s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[5.380s] gmake: *** [Makefile:146: all] Error 2
+[5.382s] Invoked command in '/home/frank/thesis/gui_ws/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis/gui_ws/build/bms_gui -- -j16 -l16
