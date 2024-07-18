@@ -1,1 +1,0 @@
-[0mCMake Error: The current CMakeCache.txt directory /home/frank/thesis_ws/bms_gui/build/bms_gui/CMakeCache.txt is different than the directory /home/frank/thesis/gui_ws/build/bms_gui where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m

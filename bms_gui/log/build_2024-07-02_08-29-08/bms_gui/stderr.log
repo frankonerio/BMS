@@ -1,0 +1,7 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell2_valueChanged(int)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:42:38:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KtoStdString[m[K’ in ‘[01m[Kvalue[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   42 |     ui->cell2_voltage->setText(value.[01;31m[KtoStdString[m[K());
+      |                                      [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

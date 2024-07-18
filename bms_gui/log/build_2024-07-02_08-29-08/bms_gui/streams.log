@@ -1,0 +1,10 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.068s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[2.210s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell2_valueChanged(int)[m[K’:
+[2.210s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:42:38:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KtoStdString[m[K’ in ‘[01m[Kvalue[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[2.210s]    42 |     ui->cell2_voltage->setText(value.[01;31m[KtoStdString[m[K());
+[2.210s]       |                                      [01;31m[K^~~~~~~~~~~[m[K
+[2.607s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.608s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.608s] gmake: *** [Makefile:146: all] Error 2
+[2.609s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

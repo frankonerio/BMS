@@ -1,0 +1,14 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.069s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[2.238s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kvirtual void Ros2Comm::run()[m[K’:
+[2.238s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:36:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kbattery_info[m[K’ was not declared in this scope
+[2.238s]    36 |         battery_state_publisher->publish([01;31m[Kbattery_info[m[K);
+[2.238s]       |                                          [01;31m[K^~~~~~~~~~~~[m[K
+[2.245s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[2.245s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbattery_info[m[K’ was not declared in this scope
+[2.245s]    85 |         [01;31m[Kbattery_info[m[K.voltage = (float)(tab_dest[6]/1000);
+[2.245s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[2.825s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+[2.825s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.825s] gmake: *** [Makefile:146: all] Error 2
+[2.826s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

@@ -1,0 +1,18 @@
+[ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:71:8:[m[K [01;31m[Kerror: [m[Kdefault argument given for parameter 2 of ‘[01m[Kdouble MainWindow::calculatePercentage(int16_t, int16_t, int16_t)[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   71 | double [01;31m[KMainWindow[m[K::calculatePercentage(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200) {
+      |        [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:35:12:[m[K [01;36m[Knote: [m[Kprevious specification in ‘[01m[Kdouble MainWindow::calculatePercentage(int16_t, int16_t, int16_t)[m[K’ here
+   35 |     double [01;36m[KcalculatePercentage[m[K(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200);
+      |            [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:71:8:[m[K [01;31m[Kerror: [m[Kdefault argument given for parameter 3 of ‘[01m[Kdouble MainWindow::calculatePercentage(int16_t, int16_t, int16_t)[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   71 | double [01;31m[KMainWindow[m[K::calculatePercentage(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200) {
+      |        [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:35:12:[m[K [01;36m[Knote: [m[Kprevious specification in ‘[01m[Kdouble MainWindow::calculatePercentage(int16_t, int16_t, int16_t)[m[K’ here
+   35 |     double [01;36m[KcalculatePercentage[m[K(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200);
+      |            [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

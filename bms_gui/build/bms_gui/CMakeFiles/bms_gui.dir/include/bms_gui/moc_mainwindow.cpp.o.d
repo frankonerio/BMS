@@ -1,5 +1,5 @@
 CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o: \
- /home/frank/thesis/gui_ws/build/bms_gui/include/bms_gui/moc_mainwindow.cpp \
+ /home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_mainwindow.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -116,7 +116,7 @@ CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/frank/thesis/gui_ws/build/bms_gui/include/bms_gui/../../../../src/bms_gui/include/bms_gui/mainwindow.h \
+ /home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -280,7 +280,7 @@ CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/ros2comm.h \
+ /home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \

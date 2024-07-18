@@ -1,8 +1,8 @@
-# Install script for directory: /home/frank/thesis/gui_ws/src/bms_gui
+# Install script for directory: /home/frank/thesis_ws/bms_gui/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/frank/thesis/gui_ws/install/bms_gui")
+  set(CMAKE_INSTALL_PREFIX "/home/frank/thesis_ws/bms_gui/install/bms_gui")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bms_gui/bms_gui"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bms_gui" TYPE EXECUTABLE FILES "/home/frank/thesis/gui_ws/build/bms_gui/bms_gui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bms_gui" TYPE EXECUTABLE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/bms_gui")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bms_gui/bms_gui" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/bms_gui/bms_gui")
     file(RPATH_CHANGE
@@ -63,15 +63,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/frank/thesis/gui_ws/build/bms_gui/CMakeFiles/bms_gui.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/home/frank/thesis_ws/bms_gui/build/bms_gui/CMakeFiles/bms_gui.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bms_gui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bms_gui")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bms_gui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/bms_gui")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,7 +79,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui/environment" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui/environment" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -87,42 +87,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui/environment" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui/environment" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/packages/bms_gui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_index/share/ament_index/resource_index/packages/bms_gui")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui/cmake" TYPE FILE FILES
-    "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_core/bms_guiConfig.cmake"
-    "/home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_core/bms_guiConfig-version.cmake"
+    "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_core/bms_guiConfig.cmake"
+    "/home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_core/bms_guiConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis/gui_ws/src/bms_gui/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bms_gui" TYPE FILE FILES "/home/frank/thesis_ws/bms_gui/src/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -133,5 +133,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/frank/thesis/gui_ws/build/bms_gui/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/frank/thesis_ws/bms_gui/build/bms_gui/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

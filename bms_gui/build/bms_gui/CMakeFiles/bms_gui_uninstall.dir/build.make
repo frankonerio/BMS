@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/frank/thesis/gui_ws/src/bms_gui
+CMAKE_SOURCE_DIR = /home/frank/thesis_ws/bms_gui/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/frank/thesis/gui_ws/build/bms_gui
+CMAKE_BINARY_DIR = /home/frank/thesis_ws/bms_gui/build/bms_gui
 
 # Utility rule file for bms_gui_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/bms_gui_uninstall.dir/compiler_depend.make
 include CMakeFiles/bms_gui_uninstall.dir/progress.make
 
 CMakeFiles/bms_gui_uninstall:
-	/usr/bin/cmake -P /home/frank/thesis/gui_ws/build/bms_gui/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/frank/thesis_ws/bms_gui/build/bms_gui/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 bms_gui_uninstall: CMakeFiles/bms_gui_uninstall
 bms_gui_uninstall: CMakeFiles/bms_gui_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/bms_gui_uninstall.dir/clean:
 .PHONY : CMakeFiles/bms_gui_uninstall.dir/clean
 
 CMakeFiles/bms_gui_uninstall.dir/depend:
-	cd /home/frank/thesis/gui_ws/build/bms_gui && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/frank/thesis/gui_ws/src/bms_gui /home/frank/thesis/gui_ws/src/bms_gui /home/frank/thesis/gui_ws/build/bms_gui /home/frank/thesis/gui_ws/build/bms_gui /home/frank/thesis/gui_ws/build/bms_gui/CMakeFiles/bms_gui_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/frank/thesis_ws/bms_gui/build/bms_gui && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/frank/thesis_ws/bms_gui/src /home/frank/thesis_ws/bms_gui/src /home/frank/thesis_ws/bms_gui/build/bms_gui /home/frank/thesis_ws/bms_gui/build/bms_gui /home/frank/thesis_ws/bms_gui/build/bms_gui/CMakeFiles/bms_gui_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bms_gui_uninstall.dir/depend
 

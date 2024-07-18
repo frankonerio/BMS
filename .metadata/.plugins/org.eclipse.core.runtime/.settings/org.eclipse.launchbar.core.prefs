@@ -1,9 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms (1)
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:try,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms (1)
 eclipse.preferences.version=1
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms\ (1)/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms\ (1)/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms\ (1)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GETjag_bms/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:test/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:try/activeLaunchMode=run

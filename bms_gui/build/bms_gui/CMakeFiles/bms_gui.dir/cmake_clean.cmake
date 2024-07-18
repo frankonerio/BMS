@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o"
-  "CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o.d"
   "CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o"
   "CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o.d"
   "CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o"
@@ -13,7 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o.d"
   "bms_gui"
   "bms_gui.pdb"
-  "build/bms_gui/moc_ui_mainwindow.cpp"
   "include/bms_gui/moc_mainwindow.cpp"
   "include/bms_gui/moc_ros2comm.cpp"
   "ui_mainwindow.h"

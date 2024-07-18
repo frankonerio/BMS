@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -61,6 +61,12 @@ default.size.stdout \
 OBJDUMP_LIST += \
 GETjag_bms.list \
 
+OBJCOPY_HEX += \
+GETjag_bms.hex \
+
+OBJCOPY_BIN += \
+GETjag_bms.bin \
+
 
 # All Target
 all: main-build
@@ -84,12 +90,22 @@ GETjag_bms.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+GETjag_bms.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "GETjag_bms.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+GETjag_bms.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "GETjag_bms.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) GETjag_bms.elf GETjag_bms.list GETjag_bms.map default.size.stdout
+	-$(RM) GETjag_bms.bin GETjag_bms.elf GETjag_bms.hex GETjag_bms.list GETjag_bms.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;test/Core/Inc/BQ769x2Header&apos; to &apos;BQ769x2Header.h&apos;" description="Rename resource &apos;BQ769x2Header&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/BQ769x2Header" name="BQ769x2Header.h" stamp="1718959662891" updateReferences="true"/>
+</session>

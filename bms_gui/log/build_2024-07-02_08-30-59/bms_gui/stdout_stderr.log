@@ -1,0 +1,16 @@
+[ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell2_valueChanged(int)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:42:46:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst QString&[m[K’
+   42 |     ui->cell2_voltage->setText([01;31m[Kstd::to_string(value)[m[K);
+      |                                [01;31m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+      |                                              [01;31m[K|[m[K
+      |                                              [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:1[m[K,
+                 from [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/./ui_mainwindow.h:14[m[K,
+                 from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:2[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:136:18:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid QLabel::setText(const QString&)[m[K’
+  136 |     void setText([01;36m[Kconst QString &[m[K);
+      |                  [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

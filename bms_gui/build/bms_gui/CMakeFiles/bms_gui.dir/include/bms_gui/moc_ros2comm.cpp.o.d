@@ -1,5 +1,5 @@
 CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o: \
- /home/frank/thesis/gui_ws/build/bms_gui/include/bms_gui/moc_ros2comm.cpp \
+ /home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_ros2comm.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -116,7 +116,7 @@ CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/frank/thesis/gui_ws/build/bms_gui/include/bms_gui/../../../../src/bms_gui/include/bms_gui/ros2comm.h \
+ /home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/ros2comm.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \

@@ -1,0 +1,82 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.068s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[2.213s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell2_valueChanged(int)[m[K’:
+[2.213s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:43:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KQString::QString(std::string&)[m[K’
+[2.214s]    43 |     ui->cell2_voltage->setText((QString)[01;31m[KmyStdString[m[K);
+[2.214s]       |                                         [01;31m[K^~~~~~~~~~~[m[K
+[2.214s] In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:47[m[K,
+[2.214s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:45[m[K,
+[2.214s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:44[m[K,
+[2.214s]                  from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:1[m[K,
+[2.214s]                  from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:4[m[K,
+[2.214s]                  from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[2.214s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:967:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr QString::QString(QStringDataPtr)[m[K’
+[2.214s]   967 |     Q_DECL_CONSTEXPR inline [01;36m[KQString[m[K(QStringDataPtr dd) : d(dd.ptr) {}
+[2.214s]       |                             [01;36m[K^~~~~~~[m[K
+[2.214s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:967:52:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[KQStringDataPtr[m[K’
+[2.214s]   967 |     Q_DECL_CONSTEXPR inline QString([01;36m[KQStringDataPtr dd[m[K) : d(dd.ptr) {}
+[2.214s]       |                                     [01;36m[K~~~~~~~~~~~~~~~^~[m[K
+[2.214s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:966:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(int, Qt::Initialization)[m[K’
+[2.214s]   966 |     [01;36m[KQString[m[K(int size, Qt::Initialization);
+[2.214s]       |     [01;36m[K^~~~~~~[m[K
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:966:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:955:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(const QString::Null&)[m[K’
+[2.220s]   955 |     inline [01;36m[KQString[m[K(const Null &): d(Data::sharedNull()) {}
+[2.220s]       |            [01;36m[K^~~~~~~[m[K
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:955:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst QString::Null&[m[K’
+[2.220s]   955 |     inline QString([01;36m[Kconst Null &[m[K): d(Data::sharedNull()) {}
+[2.220s]       |                    [01;36m[K^~~~~~~~~~~~[m[K
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:838:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(const QByteArray&)[m[K’
+[2.220s]   838 |     inline QT_ASCII_CAST_WARN [01;36m[KQString[m[K(const QByteArray &a)
+[2.220s]       |                               [01;36m[K^~~~~~~[m[K
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:838:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst QByteArray&[m[K’
+[2.220s]   838 |     inline QT_ASCII_CAST_WARN QString([01;36m[Kconst QByteArray &a[m[K)
+[2.220s]       |                                       [01;36m[K~~~~~~~~~~~~~~~~~~^[m[K
+[2.220s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:835:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(const char*)[m[K’
+[2.220s]   835 |     inline QT_ASCII_CAST_WARN [01;36m[KQString[m[K(const char *ch)
+[2.220s]       |                               [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:835:51:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst char*[m[K’
+[2.221s]   835 |     inline QT_ASCII_CAST_WARN QString([01;36m[Kconst char *ch[m[K)
+[2.221s]       |                                       [01;36m[K~~~~~~~~~~~~^~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:273:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(QString&&)[m[K’
+[2.221s]   273 |     inline [01;36m[KQString[m[K(QString && other) noexcept : d(other.d) { other.d = Data::sharedNull(); }
+[2.221s]       |            [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:273:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[KQString&&[m[K’
+[2.221s]   273 |     inline QString([01;36m[KQString && other[m[K) noexcept : d(other.d) { other.d = Data::sharedNull(); }
+[2.221s]       |                    [01;36m[K~~~~~~~~~~~^~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1093:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(const QString&)[m[K’
+[2.221s]  1093 | inline [01;36m[KQString[m[K::QString(const QString &other) noexcept : d(other.d)
+[2.221s]       |        [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1093:40:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst QString&[m[K’
+[2.221s]  1093 | inline QString::QString([01;36m[Kconst QString &other[m[K) noexcept : d(other.d)
+[2.221s]       |                         [01;36m[K~~~~~~~~~~~~~~~^~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1067:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(QLatin1String)[m[K’
+[2.221s]  1067 | inline [01;36m[KQString[m[K::QString(QLatin1String aLatin1) : d(fromLatin1_helper(aLatin1.latin1(), aLatin1.size()))
+[2.221s]       |        [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1067:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[KQLatin1String[m[K’
+[2.221s]  1067 | inline QString::QString([01;36m[KQLatin1String aLatin1[m[K) : d(fromLatin1_helper(aLatin1.latin1(), aLatin1.size()))
+[2.221s]       |                         [01;36m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:266:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(int, QChar)[m[K’
+[2.221s]   266 |     [01;36m[KQString[m[K(int size, QChar c);
+[2.221s]       |     [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:266:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:265:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(QChar)[m[K’
+[2.221s]   265 |     [01;36m[KQString[m[K(QChar c);
+[2.221s]       |     [01;36m[K^~~~~~~[m[K
+[2.221s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:265:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[KQChar[m[K’
+[2.221s]   265 |     QString([01;36m[KQChar c[m[K);
+[2.222s]       |             [01;36m[K~~~~~~^[m[K
+[2.222s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:264:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString(const QChar*, int)[m[K’
+[2.222s]   264 |     explicit [01;36m[KQString[m[K(const QChar *unicode, int size = -1);
+[2.222s]       |              [01;36m[K^~~~~~~[m[K
+[2.222s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:264:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst QChar*[m[K’
+[2.222s]   264 |     explicit QString([01;36m[Kconst QChar *unicode[m[K, int size = -1);
+[2.222s]       |                      [01;36m[K~~~~~~~~~~~~~^~~~~~~[m[K
+[2.222s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1310:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQString::QString()[m[K’
+[2.222s]  1310 | inline [01;36m[KQString[m[K::QString() noexcept : d(Data::sharedNull()) {}
+[2.222s]       |        [01;36m[K^~~~~~~[m[K
+[2.222s] [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:1310:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[2.600s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.600s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.600s] gmake: *** [Makefile:146: all] Error 2
+[2.602s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

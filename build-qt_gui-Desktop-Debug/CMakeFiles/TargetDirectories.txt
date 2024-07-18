@@ -1,0 +1,9 @@
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/qt_gui.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/install.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/install/local.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/install/strip.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/qt_gui_autogen_timestamp_deps.dir
+/home/frank/thesis_ws/build-qt_gui-Desktop-Debug/CMakeFiles/qt_gui_autogen.dir

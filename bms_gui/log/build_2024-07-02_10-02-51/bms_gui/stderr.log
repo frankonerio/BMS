@@ -1,0 +1,11 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kvirtual void Ros2Comm::run()[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:36:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kbattery_info[m[K’ was not declared in this scope
+   36 |         battery_state_publisher->publish([01;31m[Kbattery_info[m[K);
+      |                                          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbattery_info[m[K’ was not declared in this scope
+   85 |         [01;31m[Kbattery_info[m[K.voltage = (float)(tab_dest[6]/1000);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

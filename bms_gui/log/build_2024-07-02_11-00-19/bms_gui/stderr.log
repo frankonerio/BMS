@@ -1,0 +1,13 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:73:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint MainWindow::calculatePercentage(int16_t, int16_t, int16_t) const[m[K’
+   73 | int [01;31m[KMainWindow[m[K::calculatePercentage(int16_t value, int16_t minValue, int16_t maxValue) const {
+      |     [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:36:9:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kdouble MainWindow::calculatePercentage(int16_t, int16_t, int16_t) const[m[K’
+   36 |  double [01;36m[KcalculatePercentage[m[K(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200) const;
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:28:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   28 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

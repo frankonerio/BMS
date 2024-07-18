@@ -61,12 +61,16 @@ void Error_Handler(void);
 #define GPIO_W5500_RESET_GPIO_Port GPIOA
 #define GPIO_W5500_CS_Pin GPIO_PIN_4
 #define GPIO_W5500_CS_GPIO_Port GPIOA
-#define LED_Pin GPIO_PIN_12
-#define LED_GPIO_Port GPIOB
+#define LED_1_Pin GPIO_PIN_0
+#define LED_1_GPIO_Port GPIOB
+#define LED_2_Pin GPIO_PIN_1
+#define LED_2_GPIO_Port GPIOB
 #define SPI_INT_Pin GPIO_PIN_15
 #define SPI_INT_GPIO_Port GPIOB
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define BUZZER_Pin GPIO_PIN_11
+#define BUZZER_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 

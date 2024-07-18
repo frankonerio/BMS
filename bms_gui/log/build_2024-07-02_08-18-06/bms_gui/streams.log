@@ -1,0 +1,31 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.050s] [ 11%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[0.050s] [ 22%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[0.074s] [ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.074s] [ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.074s] [ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[0.075s] [ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[0.075s] [ 77%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[4.049s] [ 88%] [32m[1mLinking CXX executable bms_gui[0m
+[4.447s] [100%] Built target bms_gui
+[4.452s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[4.473s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis_ws/bms_gui/build/bms_gui
+[4.474s] -- Install configuration: ""
+[4.474s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui
+[4.475s] -- Set non-toolchain portion of runtime path of "/home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui" to ""
+[4.475s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/package_run_dependencies/bms_gui
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/parent_prefix_path/bms_gui
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.sh
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.dsv
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.sh
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.dsv
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.bash
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.sh
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.zsh
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.dsv
+[4.476s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.dsv
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/packages/bms_gui
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig.cmake
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig-version.cmake
+[4.476s] -- Up-to-date: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.xml
+[4.477s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis_ws/bms_gui/build/bms_gui

@@ -1,0 +1,11 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell2_valueChanged(int)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:42:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Kcell2_voltatge[m[K’; did you mean ‘[01m[Kcell2_voltage[m[K’?
+   42 |     ui->[01;31m[Kcell2_voltatge[m[K->setText(value.toStdString());
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+      |         [32m[Kcell2_voltage[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:42:39:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KtoStdString[m[K’ in ‘[01m[Kvalue[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   42 |     ui->cell2_voltatge->setText(value.[01;31m[KtoStdString[m[K());
+      |                                       [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

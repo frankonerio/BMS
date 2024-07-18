@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/frank/thesis/gui_ws/src/bms_gui
+CMAKE_SOURCE_DIR = /home/frank/thesis_ws/bms_gui/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/frank/thesis/gui_ws/build/bms_gui
+CMAKE_BINARY_DIR = /home/frank/thesis_ws/bms_gui/build/bms_gui
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/thesis/gui_ws/build/bms_gui/CMakeFiles /home/frank/thesis/gui_ws/build/bms_gui//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/thesis_ws/bms_gui/build/bms_gui/CMakeFiles /home/frank/thesis_ws/bms_gui/build/bms_gui//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/thesis/gui_ws/build/bms_gui/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/frank/thesis_ws/bms_gui/build/bms_gui/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -209,30 +209,6 @@ bms_gui: cmake_check_build_system
 bms_gui/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build
 .PHONY : bms_gui/fast
-
-build/bms_gui/moc_ui_mainwindow.o: build/bms_gui/moc_ui_mainwindow.cpp.o
-.PHONY : build/bms_gui/moc_ui_mainwindow.o
-
-# target to build an object file
-build/bms_gui/moc_ui_mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o
-.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.o
-
-build/bms_gui/moc_ui_mainwindow.i: build/bms_gui/moc_ui_mainwindow.cpp.i
-.PHONY : build/bms_gui/moc_ui_mainwindow.i
-
-# target to preprocess a source file
-build/bms_gui/moc_ui_mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.i
-.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.i
-
-build/bms_gui/moc_ui_mainwindow.s: build/bms_gui/moc_ui_mainwindow.cpp.s
-.PHONY : build/bms_gui/moc_ui_mainwindow.s
-
-# target to generate assembly for a file
-build/bms_gui/moc_ui_mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.s
-.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.s
 
 include/bms_gui/moc_mainwindow.o: include/bms_gui/moc_mainwindow.cpp.o
 .PHONY : include/bms_gui/moc_mainwindow.o
@@ -370,9 +346,6 @@ help:
 	@echo "... bms_gui_uninstall"
 	@echo "... uninstall"
 	@echo "... bms_gui"
-	@echo "... build/bms_gui/moc_ui_mainwindow.o"
-	@echo "... build/bms_gui/moc_ui_mainwindow.i"
-	@echo "... build/bms_gui/moc_ui_mainwindow.s"
 	@echo "... include/bms_gui/moc_mainwindow.o"
 	@echo "... include/bms_gui/moc_mainwindow.i"
 	@echo "... include/bms_gui/moc_mainwindow.s"

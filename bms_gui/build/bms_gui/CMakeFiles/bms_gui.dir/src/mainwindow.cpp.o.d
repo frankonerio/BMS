@@ -1,7 +1,7 @@
 CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o: \
- /home/frank/thesis/gui_ws/src/bms_gui/src/mainwindow.cpp \
+ /home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/mainwindow.h \
+ /home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -279,7 +279,7 @@ CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/ros2comm.h \
+ /home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
@@ -780,7 +780,7 @@ CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
- /home/frank/thesis/gui_ws/build/bms_gui/./ui_mainwindow.h \
+ /home/frank/thesis_ws/bms_gui/build/bms_gui/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
@@ -790,16 +790,6 @@ CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
@@ -808,14 +798,9 @@ CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h

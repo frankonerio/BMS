@@ -1,6 +1,0 @@
-Invoking command in '/home/frank/thesis/gui_ws/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/frank/thesis/gui_ws/src/bms_gui -DCMAKE_INSTALL_PREFIX=/home/frank/thesis/gui_ws/install/bms_gui
-Invoked command in '/home/frank/thesis/gui_ws/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/frank/thesis/gui_ws/src/bms_gui -DCMAKE_INSTALL_PREFIX=/home/frank/thesis/gui_ws/install/bms_gui
-Invoking command in '/home/frank/thesis/gui_ws/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis/gui_ws/build/bms_gui -- -j16 -l16
-Invoked command in '/home/frank/thesis/gui_ws/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis/gui_ws/build/bms_gui -- -j16 -l16
-Invoking command in '/home/frank/thesis/gui_ws/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis/gui_ws/build/bms_gui
-Invoked command in '/home/frank/thesis/gui_ws/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis/gui_ws/build/bms_gui

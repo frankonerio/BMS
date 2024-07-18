@@ -1,7 +1,7 @@
 CMakeFiles/bms_gui.dir/src/main.cpp.o: \
- /home/frank/thesis/gui_ws/src/bms_gui/src/main.cpp \
+ /home/frank/thesis_ws/bms_gui/src/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/mainwindow.h \
+ /home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -279,7 +279,7 @@ CMakeFiles/bms_gui.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /home/frank/thesis/gui_ws/src/bms_gui/include/bms_gui/ros2comm.h \
+ /home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \

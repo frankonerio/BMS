@@ -1,0 +1,9 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.068s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[2.237s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:73:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kdouble[m[K’
+[2.237s]    73 | [01;31m[Kdouble[m[K MainWindow::calculatePercentage(int16_t value, int16_t minValue = 0, int16_t maxValue = 4200) {
+[2.237s]       | [01;31m[K^~~~~~[m[K
+[2.621s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.621s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.621s] gmake: *** [Makefile:146: all] Error 2
+[2.623s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
