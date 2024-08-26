@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;GETjag_bms/Core/Src/BQ_common.c&apos; to &apos;bq_common.c&apos;" description="Rename resource &apos;BQ_common.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/BQ_common.c" name="bq_common.c" stamp="1724318221768" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;GETjag_bms/Core/Inc/BQ_common.h&apos; to &apos;bq_common.h&apos;" description="Rename resource &apos;BQ_common.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/BQ_common.h" name="bq_common.h" stamp="1724318237527" updateReferences="true"/>
+</session>

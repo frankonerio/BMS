@@ -1,0 +1,28 @@
+[0.031s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.047s] [ 11%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[0.068s] [ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.068s] [ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.068s] [ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[2.399s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/main.cpp:1[m[K:
+[2.399s] [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+[2.399s]    24 | extern [01;31m[Ktab_dest[m[K[64];
+[2.399s]       |        [01;31m[K^~~~~~~~[m[K
+[2.405s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_mainwindow.cpp:10[m[K:
+[2.405s] [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+[2.405s]    24 | extern [01;31m[Ktab_dest[m[K[64];
+[2.405s]       |        [01;31m[K^~~~~~~~[m[K
+[2.420s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[2.420s] [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+[2.420s]    24 | extern [01;31m[Ktab_dest[m[K[64];
+[2.420s]       |        [01;31m[K^~~~~~~~[m[K
+[2.448s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell1_valueChanged(int)[m[K’:
+[2.449s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:57:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ was not declared in this scope
+[2.449s]    57 |     [01;31m[Ktab_dest[m[K[6];
+[2.449s]       |     [01;31m[K^~~~~~~~[m[K
+[2.835s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:88: CMakeFiles/bms_gui.dir/src/main.cpp.o] Error 1
+[2.835s] gmake[2]: *** Waiting for unfinished jobs....
+[2.839s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:130: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o] Error 1
+[2.875s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.875s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.875s] gmake: *** [Makefile:146: all] Error 2
+[2.877s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

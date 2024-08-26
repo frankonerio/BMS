@@ -1,0 +1,68 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:100:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_2_voltage_update(int)[m[K’
+  100 | void [01;31m[KMainWindow[m[K::lcd_cell_2_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:100:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_2_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:105:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_3_voltage_update(int)[m[K’
+  105 | void [01;31m[KMainWindow[m[K::lcd_cell_3_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:105:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_3_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:110:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_4_voltage_update(int)[m[K’
+  110 | void [01;31m[KMainWindow[m[K::lcd_cell_4_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:110:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_4_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:115:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_5_voltage_update(int)[m[K’
+  115 | void [01;31m[KMainWindow[m[K::lcd_cell_5_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:115:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_5_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:120:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_6_voltage_update(int)[m[K’
+  120 | void [01;31m[KMainWindow[m[K::lcd_cell_6_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:120:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_6_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:125:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_7_voltage_update(int)[m[K’
+  125 | void [01;31m[KMainWindow[m[K::lcd_cell_7_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:125:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_7_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:130:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_8_voltage_update(int)[m[K’
+  130 | void [01;31m[KMainWindow[m[K::lcd_cell_8_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:130:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_8_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:135:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::lcd_cell_9_voltage_update(int)[m[K’
+  135 | void [01;31m[KMainWindow[m[K::lcd_cell_9_voltage_update(int value)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:135:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::lcd_cell_9_voltage_update(int)[m[K’
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   32 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

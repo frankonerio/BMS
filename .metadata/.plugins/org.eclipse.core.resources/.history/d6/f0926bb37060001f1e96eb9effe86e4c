@@ -1,0 +1,92 @@
+/*
+ * BQ_common.h
+ *
+ *  Created on: Jul 28, 2024
+ *      Author: frank
+ */
+
+#ifndef INC_BQ_COMMON_H_
+#define INC_BQ_COMMON_H_
+
+#include "stdbool.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include "BQ769x2Header.h"
+
+// BQ76952 definations
+#define EEPROM_ADDRESS 0x57 << 1
+#define DEV_ADDR 0x10 // BQ769x2 address is 0x10 including R/W bit or 0x8 as 7-bit address
+#define CRC_Mode 0    // 0 for disabled, 1 for enabled
+#define MAX_BUFFER_SIZE 10
+#define R 0  // Read; Used in DirectCommands and Subcommands functions
+#define W 1  // Write; Used in DirectCommands and Subcommands functions
+#define W2 2 // Write data with two bytes; Used in Subcommands function
+#define NEW_I2C_ADDR 0x12
+
+// BQ78952 Private Variables
+uint8_t RX_data[2] = {0x00, 0x00}; // used in several functions to store data read from BQ769x2
+uint8_t RX_32Byte[32] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+// used in Subcommands read function
+// Global Variables for cell voltages, temperatures, Stack voltage, PACK Pin voltage, LD Pin voltage, CC2 current
+uint16_t CellVoltage[16] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+extern uint8_t UV_Fault;             // under-voltage fault state
+extern uint8_t OV_Fault;             // over-voltage fault state
+extern uint8_t SCD_Fault;            // short-circuit fault state
+extern uint8_t OCD_Fault;            // over-current fault state
+extern uint8_t ProtectionsTriggered; // Set to 1 if any protection triggers
+
+typedef enum
+{
+	BMS_STATE_OFF,      ///< Off state (charging and discharging disabled)
+	BMS_STATE_CHG,      ///< Charging state (discharging disabled)
+	BMS_STATE_DIS,      ///< Discharging state (charging disabled)
+	BMS_STATE_NORMAL,   ///< Normal operating mode (both charging and discharging enabled)
+	BMS_STATE_SHUTDOWN, ///< BMS starting shutdown sequence
+
+} bms_state;
+
+typedef struct
+{
+	bms_state bms_state;
+
+	/** Manual enable/disable setting for charging */
+	bool charge_enable;
+	/** Manual enable/disable setting for discharging */
+	bool discharge_enable;
+
+	/** CV charging to cell_chg_voltage_limit finished */
+	bool battery_full;
+	/** Battery is discharged below cell_dis_voltage_limit */
+	bool battery_empty;
+
+	/** Calculated State of Charge (%) */
+	float soc;
+
+	/** Nominal capacity of battery pack (Ah) */
+	float nominal_capacity_Ah;
+
+	uint16_t Stack_Voltage;
+	uint16_t Pack_Voltage;
+	uint16_t LD_Voltage;
+	//uint16_t Pack_Current = 0x00;
+
+	uint8_t bms_device;
+
+}bms_context;
+
+bool bms_charge_error();
+
+bool bms_discharge_error();
+
+bool bms_charge_allowed(bms_context *bms);
+
+bool bms_discharge_allowed(bms_context *bms);
+
+void bms_state_machine(bms_context *bms);
+
+void BQ769x2_ReadAllVoltages(bms_context *bms);
+
+#endif /* INC_BQ_COMMON_H_ */

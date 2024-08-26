@@ -1,0 +1,16 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:35:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[KOC_status[m[K’; did you mean ‘[01m[KOV_status[m[K’?
+   35 |         ui->[01;31m[KOC_status[m[K->clear();
+      |             [01;31m[K^~~~~~~~~[m[K
+      |             [32m[KOV_status[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:36:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[KOT_status[m[K’; did you mean ‘[01m[KOV_status[m[K’?
+   36 |         ui->[01;31m[KOT_status[m[K->clear();
+      |             [01;31m[K^~~~~~~~~[m[K
+      |             [32m[KOV_status[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:37:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Kfault_status[m[K’; did you mean ‘[01m[KUV_status[m[K’?
+   37 |         ui->[01;31m[Kfault_status[m[K->clear();
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+      |             [32m[KUV_status[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

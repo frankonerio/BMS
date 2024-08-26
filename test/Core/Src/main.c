@@ -24,6 +24,8 @@
 #include "string.h"
 #include "BQ769x2Header.h"
 #include "stdio.h"
+#include "soc_soh.h"
+#include <stdint.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,13 +40,19 @@
 #define EEPROM_ADDRESS 0x57<<1
 
 #define DEV_ADDR   0x10// BQ769x2 address is 0x10 including R/W bit or 0x8 as 7-bit address
-#define CRC_Mode 1  // 0 for disabled, 1 for enabled
+#define CRC_Mode 0  // 0 for disabled, 1 for enabled
 #define MAX_BUFFER_SIZE 10
 #define R 0 // Read; Used in DirectCommands and Subcommands functions
 #define W 1 // Write; Used in DirectCommands and Subcommands functions
 #define W2 2 // Write data with two bytes; Used in Subcommands function
 #define NEW_I2C_ADDR 0x12
 #define MAX_I2C_DEVICES 128
+#define FRAC_DIVISOR 0xFFFFFFFFUL
+
+CellSelectRegister selected_cells = {.value = 0x801F}; // Assuming 6 cells are selected
+//CellSelectRegister selected_cells = {.value = 0xFFFF};
+Soc_coulomb_counting soc_coulomb_count_init;
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -59,13 +67,13 @@ TIM_HandleTypeDef htim10;
 
 /* USER CODE BEGIN PV */
 
-uint8_t RX_data [2] = {0x00, 0x00}; // used in several functions to store data read from BQ769x2
-uint8_t RX_32Byte [32] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+uint8_t RX_data[2] = {0x00, 0x00}; // used in several functions to store data read from BQ769x2
+uint8_t RX_32Byte[32] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 	//used in Subcommands read function
 // Global Variables for cell voltages, temperatures, Stack voltage, PACK Pin voltage, LD Pin voltage, CC2 current
-uint16_t CellVoltage [16] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
-float Temperature [3] = {0,0,0};
+uint16_t CellVoltage[16] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+float Temperature[3] = {0,0,0};
 uint16_t Stack_Voltage = 0x00;
 uint16_t Pack_Voltage = 0x00;
 uint16_t LD_Voltage = 0x00;
@@ -93,10 +101,11 @@ uint8_t CHG = 0;   // charge FET state
 uint8_t PCHG = 0;  // pre-charge FET state
 uint8_t PDSG = 0;  // pre-discharge FET state
 
-uint32_t AccumulatedCharge_Int; // in BQ769x2_READPASSQ func
-uint32_t AccumulatedCharge_Frac;// in BQ769x2_READPASSQ func
-uint32_t AccumulatedCharge_Time;// in BQ769x2_READPASSQ func
+int32_t AccumulatedCharge_Int; // in BQ769x2_READPASSQ func
+int32_t AccumulatedCharge_Frac;// in BQ769x2_READPASSQ func
+int32_t AccumulatedCharge_Time;// in BQ769x2_READPASSQ func
 uint16_t alarm;
+float coulumbs;
 
 /* USER CODE END PV */
 
@@ -454,16 +463,17 @@ void BQ769x2_Init() {
 	  // Set up ALERT Pin - 0x92FC = 0x2A
 	  // This configures the ALERT pin to drive high (REG1 voltage) when enabled.
 	  // The ALERT pin can be used as an interrupt to the MCU when a protection has triggered or new measurements are available
-	  BQ769x2_SetRegister(ALERTPinConfig, 0x2A, 1);
+	  BQ769x2_SetRegister(ALERTPinConfig, 0xAA, 1);
 
 	  // Set TS1 to measure Cell Temperature - 0x92FD = 0x07
 	  // BQ769x2_SetRegister(TS1Config, 0x07, 1);
+	  BQ769x2_SetRegister(TS1Config, 0x07, 1);
 
 	  // Set TS3 to measure FET Temperature - 0x92FF = 0x0F
-	  // BQ769x2_SetRegister(TS3Config, 0x0F, 1);
+	  BQ769x2_SetRegister(TS3Config, 0x07, 1);
 
 	  // Set HDQ to measure Cell Temperature - 0x9300 = 0x07
-	  // BQ769x2_SetRegister(HDQPinConfig, 0x00, 1);  // No thermistor installed on EVM HDQ pin, so set to 0x00
+	  BQ769x2_SetRegister(HDQPinConfig, 0x00, 1);  // No thermistor installed on EVM HDQ pin, so set to 0x00
 
 	  // 'VCell Mode' - Enable 16 cells - 0x9304 = 0x0000; Writing 0x0000 sets the default of 16 cells
 	  BQ769x2_SetRegister(VCellMode, 0x801F, 2); // default 0x0000
@@ -476,10 +486,10 @@ void BQ769x2_Init() {
 	  // Enable all protections in 'Enabled Protections B' 0x9262 = 0xF7
 	  // Enables OTF (over-temperature FET), OTINT (internal over-temperature), OTD (over-temperature in discharge),
 	  // OTC (over-temperature in charge), UTINT (internal under-temperature), UTD (under-temperature in discharge), UTC (under-temperature in charge)
-	  //BQ769x2_SetRegister(EnabledProtectionsB, 0xF7, 1);
+	  BQ769x2_SetRegister(EnabledProtectionsB, 0xF7, 1);
 
 	  // 'Default Alarm Mask' - 0x..82 Enables the FullScan and ADScan bits, default value = 0xF800
-	  BQ769x2_SetRegister(DefaultAlarmMask, 0xF882, 2);
+	  BQ769x2_SetRegister(DefaultAlarmMask, 0xFFFF, 2);
 
 	  // Set up Cell Balancing Configuration - 0x9335 = 0x03   -  Automated balancing while in Relax or Charge modes
 	  // Also see "Cell Balancing with BQ769x2 Battery Monitors" document on ti.com
@@ -488,17 +498,17 @@ void BQ769x2_Init() {
 	  // Set up CUV (under-voltage) Threshold - 0x9275 = 0x31 (2479 mV)
 	  // CUV Threshold is this value multiplied by 50.6mV
 
-	  // BQ769x2_SetRegister(CUVThreshold, 0x31, 1);
-	  //BQ769x2_SetRegister(CUVThreshold, 0x14, 1);
+	  //BQ769x2_SetRegister(CUVThreshold, 0x31, 1);
+	  BQ769x2_SetRegister(CUVThreshold, 0x14, 1);
 
-	  BQ769x2_SetRegister(CUVThreshold, 0x31, 1);
+	  //BQ769x2_SetRegister(CUVThreshold, 0x31, 1);
 
 	  // Set up COV (over-voltage) Threshold - 0x9278 = 0x55 (4301 mV)
 	  // COV Threshold is this value multiplied by 50.6mV
-	  BQ769x2_SetRegister(COVThreshold, 0x55, 1);
+	  BQ769x2_SetRegister(COVThreshold, 0x60, 1);
 
 	  // Set up OCC (over-current in charge) Threshold - 0x9280 = 0x05 (10 mV = 10A across 1mOhm sense resistor) Units in 2mV
-	  BQ769x2_SetRegister(OCCThreshold, 0x02, 1);
+	  BQ769x2_SetRegister(OCCThreshold, 0x05, 1);
 
 	  // Set up OCD1 Threshold - 0x9282 = 0x0A (20 mV = 20A across 1mOhm sense resistor) units of 2mV
 	  BQ769x2_SetRegister(OCD1Threshold, 0x03, 1);
@@ -519,7 +529,19 @@ void BQ769x2_Init() {
 
 	  BQ769x2_SetRegister(FETOptions,0x3F ,1);
 
-	  BQ769x2_SetRegister(TS1Config, 0x0B, 1);
+
+
+	  BQ769x2_SetRegister(BalancingConfiguration, 0x03, 1);
+
+	  BQ769x2_SetRegister(CellBalanceMaxCells, 0x02, 1);
+
+	  //BQ769x2_SetRegister(CellBalanceInterval, (uint8_t)(200), 1);
+	  BQ769x2_SetRegister(DAConfiguration, 0x05, 1); //set user Amps to 1mA
+
+	  BQ769x2_SetRegister(PredischargeStopDelta, 0x64, 1); //set pre-discharge delta to 2500mV
+
+	  //BQ769x2_SetRegister(PredischargeTimeout , 0x64, 1); //set pre-discharge delta to 2500mV
+
 	  // Exit CONFIGUPDATE mode  - Subcommand 0x0092
 	  CommandSubcommands(EXIT_CFGUPDATE);
 
@@ -595,17 +617,6 @@ void BQ769x2_ReadSafetyStatus() { //good example functions
 		ProtectionsTriggered = 0; }
 }
 
-void BQ769x2_ReadPFStatus() {
-	// Read Permanent Fail Status A/B/C and find which bits are set
-	// This shows which permanent failures have been triggered
-	DirectCommands(PFStatusA, 0x00, R);
-	value_PFStatusA = (RX_data[1]*256 + RX_data[0]);
-	DirectCommands(PFStatusB, 0x00, R);
-	value_PFStatusB = (RX_data[1]*256 + RX_data[0]);
-	DirectCommands(PFStatusC, 0x00, R);
-	value_PFStatusC = (RX_data[1]*256 + RX_data[0]);
-}
-
 // ********************************* End of BQ769x2 Status and Fault Commands   *****************************************
 
 
@@ -625,6 +636,17 @@ uint16_t BQ769x2_ReadVoltage(uint8_t command)
 	}
 
 }
+void BQ769x2_ReadPFStatus() {
+	// Read Permanent Fail Status A/B/C and find which bits are set
+	// This shows which permanent failures have been triggered
+	DirectCommands(PFStatusA, 0x00, R);
+	value_PFStatusA = (RX_data[1]*256 + RX_data[0]);
+	DirectCommands(PFStatusB, 0x00, R);
+	value_PFStatusB = (RX_data[1]*256 + RX_data[0]);
+	DirectCommands(PFStatusC, 0x00, R);
+	value_PFStatusC = (RX_data[1]*256 + RX_data[0]);
+}
+
 void BQ769x2_ReadAllVoltages()
 // Reads all cell voltages, Stack voltage, PACK pin voltage, and LD pin voltage
 {
@@ -652,11 +674,32 @@ float BQ769x2_ReadTemperature(uint8_t command)
 	return (0.1 * (float)(RX_data[1]*256 + RX_data[0])) - 273.15;  // converts from 0.1K to Celcius
 }
 
-void BQ769x2_ReadPassQ(){ // Read Accumulated Charge and Time from DASTATUS6
-	Subcommands(DASTATUS6, 0x00, R);
-	AccumulatedCharge_Int = ((RX_32Byte[3]<<24) + (RX_32Byte[2]<<16) + (RX_32Byte[1]<<8) + RX_32Byte[0]); //Bytes 0-3
-	AccumulatedCharge_Frac = ((RX_32Byte[7]<<24) + (RX_32Byte[6]<<16) + (RX_32Byte[5]<<8) + RX_32Byte[4]); //Bytes 4-7
-	AccumulatedCharge_Time = ((RX_32Byte[11]<<24) + (RX_32Byte[10]<<16) + (RX_32Byte[9]<<8) + RX_32Byte[8]); //Bytes 8-11
+float BQ769x2_ReadPassQ(){ // Read Accumulated Charge and Time from DASTATUS6
+
+		Subcommands(DASTATUS6, 0x00, R);
+
+		AccumulatedCharge_Int = ((uint32_t)RX_32Byte[3] << 24) | ((uint32_t)RX_32Byte[2] << 16) |
+	                            ((uint32_t)RX_32Byte[1] << 8) | RX_32Byte[0];
+		AccumulatedCharge_Frac = ((uint32_t)RX_32Byte[7] << 24) | ((uint32_t)RX_32Byte[6] << 16) |
+	                             ((uint32_t)RX_32Byte[5] << 8) | RX_32Byte[4];
+	    AccumulatedCharge_Time = ((uint32_t)RX_32Byte[11] << 24) | ((uint32_t)RX_32Byte[10] << 16) |
+	                             ((uint32_t)RX_32Byte[9] << 8) | RX_32Byte[8];
+//	    uint32_t charge;
+//	    int16_t current = BQ769x2_ReadCurrent();
+//
+//	    if(current < 0){
+//	    	charge = 0xFFFFFFFF - AccumulatedCharge_Int;
+//	    }
+//	    else{
+//	    	charge = AccumulatedCharge_Int;
+//	    }
+
+	    //charge = 0xFFFFFFFF - AccumulatedCharge_Int;
+	    float totalAccumulatedCharge_mAh = (float)AccumulatedCharge_Int + ((float)AccumulatedCharge_Frac / FRAC_DIVISOR);
+	    float totalAccumulatedCharge_Ah = totalAccumulatedCharge_mAh / 1000.0f;
+
+	    coulumbs = totalAccumulatedCharge_mAh;
+	    return totalAccumulatedCharge_Ah;
 }
 
 uint8_t EEPROM_ReadByte(uint16_t MemAddress)
@@ -729,7 +772,7 @@ int main(void)
   HAL_GPIO_WritePin(RST_SHUT_GPIO_Port, RST_SHUT_Pin, GPIO_PIN_SET);  // RST_SHUT pin set low
   HAL_Delay(10);
   HAL_GPIO_WritePin(RST_SHUT_GPIO_Port, RST_SHUT_Pin, GPIO_PIN_RESET);  // RST_SHUT pin set low
-
+  HAL_Delay(1000);
 //  HAL_GPIO_WritePin(RST_SHUT_GPIO_Port, RST_SHUT_Pin, GPIO_PIN_SET);  // RST_SHUT pin set low
   HAL_GPIO_WritePin(DFETOFF_GPIO_Port, DFETOFF_Pin, GPIO_PIN_SET);  // DFETOFF pin (BOTHOFF) set low
   HAL_GPIO_WritePin(CFETOFF_GPIO_Port, CFETOFF_Pin, GPIO_PIN_SET);
@@ -741,8 +784,15 @@ int main(void)
   	delayUS(60000);
   	BQ769x2_Init();  // Configure all of the BQ769x2 register settings
   	delayUS(12000);
+  	CommandSubcommands(RESET_PASSQ);
+  	CommandSubcommands(DSG_PDSG_OFF);
   	alarm = BQ769x2_ReadAlarmStatus();
-
+  	 DirectCommands(SafetyStatusA, 0x00, R);
+  		  DirectCommands(SafetyStatusB, 0x00, R);
+  		  DirectCommands(SafetyStatusC, 0x00, R);
+  		  DirectCommands(SafetyAlertA, 0x00, R);
+  		  DirectCommands(SafetyAlertB, 0x00, R);
+  		  DirectCommands(SafetyAlertC, 0x00, R);
 //  	 CommandSubcommands(SET_CFGUPDATE);
 //  	 BQ769x2_SetRegister(MfgStatusInit, 0x0050, 2);
 //  	delayUS(12000);
@@ -759,13 +809,38 @@ int main(void)
   	uint16_t manuInit = BQ769x2_ReadRegister(MfgStatusInit);
   	uint16_t manuData = BQ769x2_ReadRegister(MANU_DATA);
   	uint16_t FET_options = BQ769x2_ReadRegister(FETOptions);
+  	uint16_t DA_config = BQ769x2_ReadRegister(DAConfiguration);
   	alarm = BQ769x2_ReadAlarmStatus();
 
-  	CommandSubcommands(ALL_FETS_ON);
-  	CommandSubcommands(ALERT_HI);
-  	CommandSubcommands(CHG_PCHG_OFF);
-  	CommandSubcommands(DSG_PDSG_OFF);
-  	CommandSubcommands(ALL_FETS_ON);
+//  	CommandSubcommands(ALL_FETS_ON);
+//
+//  	DirectCommands(FETStatus, 0x00, R);
+//  	uint8_t status1 = RX_data[0];
+//  	uint8_t status2 = RX_data[1];
+//  	CommandSubcommands(ALERT_HI);
+//  	CommandSubcommands(CHG_PCHG_OFF);
+//
+//  	DirectCommands(FETStatus, 0x00, R);
+//  	uint8_t status3 = RX_data[0];
+//  	uint8_t status4 = RX_data[1];
+//  	CommandSubcommands(DSG_PDSG_OFF);
+//
+//  	DirectCommands(FETStatus, 0x00, R);
+//  	uint8_t status5 = RX_data[0];
+//  	uint8_t status6 = RX_data[1];
+//  	CommandSubcommands(ALL_FETS_ON);
+//
+//  	DirectCommands(FETStatus, 0x00, R);
+//  	uint8_t status7 = RX_data[0];
+//  	uint8_t status8 = RX_data[1];
+//
+//  	CommandSubcommands(DSGTEST);
+
+  	//Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
+  	//Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
+
+  	CommandSubcommands(PDSGTEST);
+  	CommandSubcommands(PCHGTEST);
 
 ////
 ////	DirectCommands(FETStatus, 0x00, R);
@@ -786,6 +861,18 @@ int main(void)
 //	CommandSubcommands(SET_CFGUPDATE);
 
 //	 uint16_t addr = BQ769x2_ReadRegister(I2CAddress);
+
+  	BQ769x2_ReadAllVoltages();
+
+  	while(1){
+
+  		if(LD_Voltage > 4){
+  		  		CommandSubcommands(ALL_FETS_ON);
+  		  	BQ769x2_ReadAllVoltages();
+  		  	};
+  	};
+
+	get_initial_soc();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -795,10 +882,28 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  DirectCommands(SafetyStatusA, 0x00, R);
+	  DirectCommands(SafetyStatusB, 0x00, R);
+	  DirectCommands(SafetyStatusC, 0x00, R);
+	  DirectCommands(SafetyAlertA, 0x00, R);
+	  DirectCommands(SafetyAlertB, 0x00, R);
+	  DirectCommands(SafetyAlertC, 0x00, R);
+	 //Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
+	  //Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
+
+	  Subcommands(CBSTATUS1, 0x00, R);
+	  Subcommands(CBSTATUS2, 0x00, R);
+	  Subcommands(CBSTATUS3, 0x00, R);
+
 	  BQ769x2_ReadAllVoltages();
 	  uint16_t stackVoltage = BQ769x2_ReadVoltage(StackVoltage);
 	  uint16_t packVoltage = BQ769x2_ReadVoltage(Pack_Voltage);
 	  float ts1_temperature = BQ769x2_ReadTemperature(TS1Temperature);
+	  float ts2_temperature = BQ769x2_ReadTemperature(TS2Temperature);
+	  float ts3_temperature = BQ769x2_ReadTemperature(TS3Temperature);
+	  uint16_t current = BQ769x2_ReadCurrent();
+	  //float coulumbs = BQ769x2_ReadPassQ();
+
 
 	  uint16_t cell1 = CellVoltage[0];
 	  uint16_t cell2 = CellVoltage[1];
@@ -808,21 +913,27 @@ int main(void)
 	  uint16_t cell6 = CellVoltage[5];
 	  uint16_t cell16 = CellVoltage[15];
 
+	  //get_initial_soc();
+	 // while(1){
+
+	 // }
+	  	  float soc = soc_k_update_get(coulumbs);
+	  	  BQ769x2_ReadPassQ();
 
 	  	alarm = BQ769x2_ReadAlarmStatus();
 	  	CommandSubcommands(ALERT_HI);
 
 	  	DirectCommands(FETStatus, 0x00, R);
-	  	uint8_t status1 = RX_data[0];
-	  	uint8_t status2 = RX_data[1];
+	  	uint8_t status9 = RX_data[0];
+	  	uint8_t status10 = RX_data[1];
 
 		DirectCommands(CCGain, 0x00, R);
 		  	uint8_t reg0 = RX_data[0];
 		  	uint8_t reg1 = RX_data[1];
 
-	  	CommandSubcommands(ALERT_LO);
-	  		status1 = RX_data[0];
-	  		status2 = RX_data[1];
+//	  	CommandSubcommands(ALERT_LO);
+//	  		status1 = RX_data[0];
+//	  		status2 = RX_data[1];
 
 		AlarmBits = BQ769x2_ReadAlarmStatus();
 		GPIO_PinState buttonState = HAL_GPIO_ReadPin(ALERT_PIN_2_GPIO_Port,ALERT_PIN_2_Pin);
@@ -833,6 +944,8 @@ int main(void)
     		Temperature[1] = BQ769x2_ReadTemperature(TS3Temperature);
 			DirectCommands(AlarmStatus, 0x0080, W);  // Clear the FULLSCAN bit
 			alarm = BQ769x2_ReadAlarmStatus();
+			//Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
+			//Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
 		}
 
 

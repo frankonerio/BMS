@@ -28,7 +28,7 @@ Ros2Comm::Ros2Comm()
 }
 void Ros2Comm::run()
 {
-    rclcpp::WallRate loop_rate(0.5);
+    rclcpp::WallRate loop_rate(0.25);
     while (rclcpp::ok())
     {
         rclcpp::spin_some(node);
@@ -57,14 +57,14 @@ int Ros2Comm::update_battery_state()
     {
 
         fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-        //cell1_voltage(3800);
+    
     }
 
     // printf("connection succeeded\n");
     if (read_registers == true)
     {
 
-        rc = modbus_read_registers(ctx, 0, 10, tab_dest);
+        rc = modbus_read_registers(ctx, 0, 24, tab_dest);
         if (rc == -1)
         {
             fprintf(stderr, "%s\n", modbus_strerror(errno));
@@ -82,9 +82,20 @@ int Ros2Comm::update_battery_state()
         cell3_voltage(tab_dest[2]);
         cell4_voltage(tab_dest[3]);
         cell5_voltage(tab_dest[4]);
-        cell6_voltage(tab_dest[5]); 
-        battery_info.voltage = (float)(tab_dest[6]/1000);
-        //battery_state.voltage = tab_dest[3];
+        cell6_voltage(tab_dest[8]); 
+        
+        lcd_soc(tab_dest[21]);
+        
+       
+        lcd_cell_1(tab_dest[9]);
+	lcd_cell_2(tab_dest[10]);
+	lcd_cell_3(tab_dest[11]);
+	lcd_cell_4(tab_dest[12]);
+	lcd_cell_5(tab_dest[13]);
+	lcd_cell_6(tab_dest[17]);
+	lcd_cell_7(tab_dest[14]);
+	lcd_cell_8(tab_dest[15]);
+	lcd_cell_9(tab_dest[16]);
      }
 
     else

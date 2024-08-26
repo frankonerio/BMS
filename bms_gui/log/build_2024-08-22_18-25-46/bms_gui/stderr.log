@@ -1,0 +1,8 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:87:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   87 |         lcd_soc(tab_dest[9])[01;31m[K)[m[K;
+      |                             [01;31m[K^[m[K
+      |                             [32m[K;[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:120: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

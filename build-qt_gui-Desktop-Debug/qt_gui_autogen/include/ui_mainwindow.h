@@ -11,6 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -25,58 +27,79 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QLabel *label;
-    QLabel *cell1_voltage;
-    QLabel *cell2_voltage4;
-    QLabel *cell3_voltage;
     QLabel *label_25;
     QLabel *label_28;
     QLabel *label_29;
     QLabel *label_26;
     QLabel *label_30;
     QLabel *label_27;
-    QLabel *label_31;
     QLabel *label_32;
     QLabel *battery_Voltage;
     QLabel *label_2;
     QLabel *label_34;
     QLabel *soh;
-    QLabel *label_42;
     QLabel *label_40;
     QLabel *cells_count;
     QLabel *battery_temperature;
-    QLabel *soc;
-    QLabel *label_38;
     QLabel *label_36;
-    QLabel *current;
-    QLabel *fault;
-    QLabel *charge_status;
-    QLabel *label_52;
-    QLabel *label_51;
-    QLabel *label_53;
-    QLabel *discharge_status;
-    QProgressBar *progressBar_cell7;
-    QProgressBar *progressBar_cell1;
     QLabel *label_23;
-    QLabel *cell7_voltage;
     QLabel *label_15;
-    QLabel *cell9_voltage;
     QLabel *label_5;
-    QLabel *cell6_voltage;
-    QProgressBar *progressBar_cell5;
-    QProgressBar *progressBar_cell9;
-    QLabel *cell5_voltage;
-    QProgressBar *progressBar_cell4;
     QLabel *label_17;
     QLabel *label_19;
-    QLabel *cell4_voltage;
     QLabel *label_21;
-    QProgressBar *progressBar_cell3;
-    QProgressBar *progressBar_cell8;
     QLabel *label_3;
-    QProgressBar *progressBar_cell6;
-    QProgressBar *progressBar_cell2;
     QLabel *label_13;
-    QLabel *cell8_voltage;
+    QLabel *UV_status;
+    QLabel *OV_status;
+    QLabel *SC_status;
+    QLabel *OC_status;
+    QLabel *OT_status;
+    QLabel *fault_status;
+    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QProgressBar *progressBar_cell1;
+    QLCDNumber *V_cell_1;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout_2;
+    QProgressBar *progressBar_cell2;
+    QLCDNumber *V_cell_2;
+    QWidget *layoutWidget2;
+    QHBoxLayout *horizontalLayout_3;
+    QProgressBar *progressBar_cell3;
+    QLCDNumber *V_cell_3;
+    QWidget *layoutWidget3;
+    QHBoxLayout *horizontalLayout_4;
+    QProgressBar *progressBar_cell4;
+    QLCDNumber *V_cell_4;
+    QWidget *layoutWidget4;
+    QHBoxLayout *horizontalLayout_5;
+    QProgressBar *progressBar_cell5;
+    QLCDNumber *V_cell_5;
+    QWidget *layoutWidget5;
+    QHBoxLayout *horizontalLayout_6;
+    QProgressBar *progressBar_cell6;
+    QLCDNumber *V_cell_6;
+    QWidget *layoutWidget6;
+    QHBoxLayout *horizontalLayout_7;
+    QProgressBar *progressBar_cell7;
+    QLCDNumber *V_cell_7;
+    QWidget *layoutWidget7;
+    QHBoxLayout *horizontalLayout_8;
+    QProgressBar *progressBar_cell8;
+    QLCDNumber *V_cell_8;
+    QWidget *layoutWidget8;
+    QHBoxLayout *horizontalLayout_9;
+    QProgressBar *progressBar_cell9;
+    QLCDNumber *V_cell_9;
+    QWidget *layoutWidget9;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_42;
+    QLCDNumber *lcd_current;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_11;
+    QLabel *label_38;
+    QLCDNumber *lcd_soc;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -95,27 +118,6 @@ public:
         QFont font;
         font.setPointSize(14);
         label->setFont(font);
-        cell1_voltage = new QLabel(centralwidget);
-        cell1_voltage->setObjectName(QString::fromUtf8("cell1_voltage"));
-        cell1_voltage->setGeometry(QRect(281, 405, 90, 50));
-        cell1_voltage->setMinimumSize(QSize(90, 50));
-        cell1_voltage->setFont(font);
-        cell1_voltage->setTextFormat(Qt::PlainText);
-        cell1_voltage->setAlignment(Qt::AlignCenter);
-        cell2_voltage4 = new QLabel(centralwidget);
-        cell2_voltage4->setObjectName(QString::fromUtf8("cell2_voltage4"));
-        cell2_voltage4->setGeometry(QRect(281, 485, 90, 50));
-        cell2_voltage4->setMinimumSize(QSize(90, 50));
-        cell2_voltage4->setFont(font);
-        cell2_voltage4->setTextFormat(Qt::PlainText);
-        cell2_voltage4->setAlignment(Qt::AlignCenter);
-        cell3_voltage = new QLabel(centralwidget);
-        cell3_voltage->setObjectName(QString::fromUtf8("cell3_voltage"));
-        cell3_voltage->setGeometry(QRect(281, 565, 90, 50));
-        cell3_voltage->setMinimumSize(QSize(90, 50));
-        cell3_voltage->setFont(font);
-        cell3_voltage->setTextFormat(Qt::PlainText);
-        cell3_voltage->setAlignment(Qt::AlignCenter);
         label_25 = new QLabel(centralwidget);
         label_25->setObjectName(QString::fromUtf8("label_25"));
         label_25->setGeometry(QRect(281, 349, 90, 50));
@@ -158,26 +160,16 @@ public:
         label_27->setFont(font);
         label_27->setTextFormat(Qt::PlainText);
         label_27->setAlignment(Qt::AlignCenter);
-        label_31 = new QLabel(centralwidget);
-        label_31->setObjectName(QString::fromUtf8("label_31"));
-        label_31->setGeometry(QRect(9, 9, 200, 50));
-        label_31->setMinimumSize(QSize(200, 50));
-        QFont font1;
-        font1.setPointSize(14);
-        font1.setBold(true);
-        label_31->setFont(font1);
-        label_31->setTextFormat(Qt::PlainText);
-        label_31->setAlignment(Qt::AlignCenter);
         label_32 = new QLabel(centralwidget);
         label_32->setObjectName(QString::fromUtf8("label_32"));
-        label_32->setGeometry(QRect(10, 66, 200, 50));
+        label_32->setGeometry(QRect(23, 83, 200, 50));
         label_32->setMinimumSize(QSize(200, 50));
         label_32->setFont(font);
         label_32->setTextFormat(Qt::PlainText);
-        label_32->setAlignment(Qt::AlignCenter);
+        label_32->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         battery_Voltage = new QLabel(centralwidget);
         battery_Voltage->setObjectName(QString::fromUtf8("battery_Voltage"));
-        battery_Voltage->setGeometry(QRect(216, 66, 90, 50));
+        battery_Voltage->setGeometry(QRect(229, 83, 90, 50));
         battery_Voltage->setMinimumSize(QSize(90, 50));
         battery_Voltage->setFont(font);
         battery_Voltage->setTextFormat(Qt::PlainText);
@@ -187,197 +179,61 @@ public:
         label_2->setGeometry(QRect(30, 660, 1061, 21));
         label_34 = new QLabel(centralwidget);
         label_34->setObjectName(QString::fromUtf8("label_34"));
-        label_34->setGeometry(QRect(10, 123, 200, 50));
+        label_34->setGeometry(QRect(23, 141, 200, 50));
         label_34->setMinimumSize(QSize(200, 50));
         label_34->setFont(font);
         label_34->setTextFormat(Qt::PlainText);
-        label_34->setAlignment(Qt::AlignCenter);
+        label_34->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         soh = new QLabel(centralwidget);
         soh->setObjectName(QString::fromUtf8("soh"));
-        soh->setGeometry(QRect(518, 123, 90, 50));
+        soh->setGeometry(QRect(531, 141, 90, 50));
         soh->setMinimumSize(QSize(90, 50));
         soh->setFont(font);
         soh->setTextFormat(Qt::PlainText);
         soh->setAlignment(Qt::AlignCenter);
-        label_42 = new QLabel(centralwidget);
-        label_42->setObjectName(QString::fromUtf8("label_42"));
-        label_42->setGeometry(QRect(312, 179, 200, 50));
-        label_42->setMinimumSize(QSize(200, 50));
-        label_42->setFont(font);
-        label_42->setTextFormat(Qt::PlainText);
-        label_42->setAlignment(Qt::AlignCenter);
         label_40 = new QLabel(centralwidget);
         label_40->setObjectName(QString::fromUtf8("label_40"));
-        label_40->setGeometry(QRect(312, 123, 200, 50));
+        label_40->setGeometry(QRect(325, 141, 200, 50));
         label_40->setMinimumSize(QSize(200, 50));
         label_40->setFont(font);
         label_40->setTextFormat(Qt::PlainText);
         label_40->setAlignment(Qt::AlignCenter);
         cells_count = new QLabel(centralwidget);
         cells_count->setObjectName(QString::fromUtf8("cells_count"));
-        cells_count->setGeometry(QRect(216, 179, 90, 50));
+        cells_count->setGeometry(QRect(229, 199, 90, 50));
         cells_count->setMinimumSize(QSize(90, 50));
         cells_count->setFont(font);
         cells_count->setTextFormat(Qt::PlainText);
         cells_count->setAlignment(Qt::AlignCenter);
         battery_temperature = new QLabel(centralwidget);
         battery_temperature->setObjectName(QString::fromUtf8("battery_temperature"));
-        battery_temperature->setGeometry(QRect(216, 123, 90, 50));
+        battery_temperature->setGeometry(QRect(229, 141, 90, 50));
         battery_temperature->setMinimumSize(QSize(90, 50));
         battery_temperature->setFont(font);
         battery_temperature->setTextFormat(Qt::PlainText);
         battery_temperature->setAlignment(Qt::AlignCenter);
-        soc = new QLabel(centralwidget);
-        soc->setObjectName(QString::fromUtf8("soc"));
-        soc->setGeometry(QRect(518, 66, 90, 50));
-        soc->setMinimumSize(QSize(90, 50));
-        soc->setFont(font);
-        soc->setTextFormat(Qt::PlainText);
-        soc->setAlignment(Qt::AlignCenter);
-        label_38 = new QLabel(centralwidget);
-        label_38->setObjectName(QString::fromUtf8("label_38"));
-        label_38->setGeometry(QRect(312, 66, 200, 50));
-        label_38->setMinimumSize(QSize(200, 50));
-        label_38->setFont(font);
-        label_38->setTextFormat(Qt::PlainText);
-        label_38->setAlignment(Qt::AlignCenter);
         label_36 = new QLabel(centralwidget);
         label_36->setObjectName(QString::fromUtf8("label_36"));
-        label_36->setGeometry(QRect(10, 179, 200, 50));
+        label_36->setGeometry(QRect(23, 199, 200, 50));
         label_36->setMinimumSize(QSize(200, 50));
         label_36->setFont(font);
         label_36->setTextFormat(Qt::PlainText);
-        label_36->setAlignment(Qt::AlignCenter);
-        current = new QLabel(centralwidget);
-        current->setObjectName(QString::fromUtf8("current"));
-        current->setGeometry(QRect(518, 179, 90, 50));
-        current->setMinimumSize(QSize(90, 50));
-        current->setFont(font);
-        current->setTextFormat(Qt::PlainText);
-        current->setAlignment(Qt::AlignCenter);
-        fault = new QLabel(centralwidget);
-        fault->setObjectName(QString::fromUtf8("fault"));
-        fault->setGeometry(QRect(721, 67, 50, 50));
-        fault->setMinimumSize(QSize(50, 50));
-        fault->setFont(font);
-        fault->setTextFormat(Qt::PlainText);
-        fault->setAlignment(Qt::AlignCenter);
-        charge_status = new QLabel(centralwidget);
-        charge_status->setObjectName(QString::fromUtf8("charge_status"));
-        charge_status->setGeometry(QRect(721, 123, 50, 50));
-        charge_status->setMinimumSize(QSize(50, 50));
-        charge_status->setFont(font);
-        charge_status->setTextFormat(Qt::PlainText);
-        charge_status->setAlignment(Qt::AlignCenter);
-        label_52 = new QLabel(centralwidget);
-        label_52->setObjectName(QString::fromUtf8("label_52"));
-        label_52->setGeometry(QRect(615, 179, 100, 50));
-        label_52->setMinimumSize(QSize(100, 50));
-        label_52->setFont(font);
-        label_52->setTextFormat(Qt::PlainText);
-        label_52->setAlignment(Qt::AlignCenter);
-        label_51 = new QLabel(centralwidget);
-        label_51->setObjectName(QString::fromUtf8("label_51"));
-        label_51->setGeometry(QRect(615, 123, 100, 50));
-        label_51->setMinimumSize(QSize(100, 50));
-        label_51->setFont(font);
-        label_51->setTextFormat(Qt::PlainText);
-        label_51->setAlignment(Qt::AlignCenter);
-        label_53 = new QLabel(centralwidget);
-        label_53->setObjectName(QString::fromUtf8("label_53"));
-        label_53->setGeometry(QRect(615, 67, 100, 50));
-        label_53->setMinimumSize(QSize(100, 50));
-        label_53->setFont(font);
-        label_53->setTextFormat(Qt::PlainText);
-        label_53->setAlignment(Qt::AlignCenter);
-        discharge_status = new QLabel(centralwidget);
-        discharge_status->setObjectName(QString::fromUtf8("discharge_status"));
-        discharge_status->setGeometry(QRect(721, 179, 50, 50));
-        discharge_status->setMinimumSize(QSize(50, 50));
-        discharge_status->setFont(font);
-        discharge_status->setTextFormat(Qt::PlainText);
-        discharge_status->setAlignment(Qt::AlignCenter);
-        progressBar_cell7 = new QProgressBar(centralwidget);
-        progressBar_cell7->setObjectName(QString::fromUtf8("progressBar_cell7"));
-        progressBar_cell7->setGeometry(QRect(792, 405, 250, 50));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(progressBar_cell7->sizePolicy().hasHeightForWidth());
-        progressBar_cell7->setSizePolicy(sizePolicy);
-        progressBar_cell7->setMinimumSize(QSize(250, 50));
-        progressBar_cell7->setValue(24);
-        progressBar_cell1 = new QProgressBar(centralwidget);
-        progressBar_cell1->setObjectName(QString::fromUtf8("progressBar_cell1"));
-        progressBar_cell1->setGeometry(QRect(46, 405, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell1->sizePolicy().hasHeightForWidth());
-        progressBar_cell1->setSizePolicy(sizePolicy);
-        progressBar_cell1->setMinimumSize(QSize(250, 50));
-        progressBar_cell1->setValue(24);
+        label_36->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         label_23 = new QLabel(centralwidget);
         label_23->setObjectName(QString::fromUtf8("label_23"));
         label_23->setGeometry(QRect(756, 565, 30, 50));
         label_23->setMinimumSize(QSize(30, 50));
         label_23->setFont(font);
-        cell7_voltage = new QLabel(centralwidget);
-        cell7_voltage->setObjectName(QString::fromUtf8("cell7_voltage"));
-        cell7_voltage->setGeometry(QRect(1027, 405, 90, 50));
-        cell7_voltage->setMinimumSize(QSize(90, 50));
-        cell7_voltage->setFont(font);
-        cell7_voltage->setTextFormat(Qt::PlainText);
-        cell7_voltage->setAlignment(Qt::AlignCenter);
         label_15 = new QLabel(centralwidget);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(383, 485, 30, 50));
         label_15->setMinimumSize(QSize(30, 50));
         label_15->setFont(font);
-        cell9_voltage = new QLabel(centralwidget);
-        cell9_voltage->setObjectName(QString::fromUtf8("cell9_voltage"));
-        cell9_voltage->setGeometry(QRect(1027, 565, 90, 50));
-        cell9_voltage->setMinimumSize(QSize(90, 50));
-        cell9_voltage->setFont(font);
-        cell9_voltage->setTextFormat(Qt::PlainText);
-        cell9_voltage->setAlignment(Qt::AlignCenter);
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(10, 565, 30, 50));
         label_5->setMinimumSize(QSize(30, 50));
         label_5->setFont(font);
-        cell6_voltage = new QLabel(centralwidget);
-        cell6_voltage->setObjectName(QString::fromUtf8("cell6_voltage"));
-        cell6_voltage->setGeometry(QRect(654, 565, 90, 50));
-        cell6_voltage->setMinimumSize(QSize(90, 50));
-        cell6_voltage->setFont(font);
-        cell6_voltage->setTextFormat(Qt::PlainText);
-        cell6_voltage->setAlignment(Qt::AlignCenter);
-        progressBar_cell5 = new QProgressBar(centralwidget);
-        progressBar_cell5->setObjectName(QString::fromUtf8("progressBar_cell5"));
-        progressBar_cell5->setGeometry(QRect(419, 485, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell5->sizePolicy().hasHeightForWidth());
-        progressBar_cell5->setSizePolicy(sizePolicy);
-        progressBar_cell5->setMinimumSize(QSize(250, 50));
-        progressBar_cell5->setValue(24);
-        progressBar_cell9 = new QProgressBar(centralwidget);
-        progressBar_cell9->setObjectName(QString::fromUtf8("progressBar_cell9"));
-        progressBar_cell9->setGeometry(QRect(792, 565, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell9->sizePolicy().hasHeightForWidth());
-        progressBar_cell9->setSizePolicy(sizePolicy);
-        progressBar_cell9->setMinimumSize(QSize(250, 50));
-        progressBar_cell9->setValue(24);
-        cell5_voltage = new QLabel(centralwidget);
-        cell5_voltage->setObjectName(QString::fromUtf8("cell5_voltage"));
-        cell5_voltage->setGeometry(QRect(654, 485, 90, 50));
-        cell5_voltage->setMinimumSize(QSize(90, 50));
-        cell5_voltage->setFont(font);
-        cell5_voltage->setTextFormat(Qt::PlainText);
-        cell5_voltage->setAlignment(Qt::AlignCenter);
-        progressBar_cell4 = new QProgressBar(centralwidget);
-        progressBar_cell4->setObjectName(QString::fromUtf8("progressBar_cell4"));
-        progressBar_cell4->setGeometry(QRect(419, 405, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell4->sizePolicy().hasHeightForWidth());
-        progressBar_cell4->setSizePolicy(sizePolicy);
-        progressBar_cell4->setMinimumSize(QSize(250, 50));
-        progressBar_cell4->setValue(24);
         label_17 = new QLabel(centralwidget);
         label_17->setObjectName(QString::fromUtf8("label_17"));
         label_17->setGeometry(QRect(383, 565, 30, 50));
@@ -388,63 +244,344 @@ public:
         label_19->setGeometry(QRect(756, 405, 30, 50));
         label_19->setMinimumSize(QSize(30, 50));
         label_19->setFont(font);
-        cell4_voltage = new QLabel(centralwidget);
-        cell4_voltage->setObjectName(QString::fromUtf8("cell4_voltage"));
-        cell4_voltage->setGeometry(QRect(654, 405, 90, 50));
-        cell4_voltage->setMinimumSize(QSize(90, 50));
-        cell4_voltage->setFont(font);
-        cell4_voltage->setTextFormat(Qt::PlainText);
-        cell4_voltage->setAlignment(Qt::AlignCenter);
         label_21 = new QLabel(centralwidget);
         label_21->setObjectName(QString::fromUtf8("label_21"));
         label_21->setGeometry(QRect(756, 485, 30, 50));
         label_21->setMinimumSize(QSize(30, 50));
         label_21->setFont(font);
-        progressBar_cell3 = new QProgressBar(centralwidget);
-        progressBar_cell3->setObjectName(QString::fromUtf8("progressBar_cell3"));
-        progressBar_cell3->setGeometry(QRect(46, 565, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell3->sizePolicy().hasHeightForWidth());
-        progressBar_cell3->setSizePolicy(sizePolicy);
-        progressBar_cell3->setMinimumSize(QSize(250, 50));
-        progressBar_cell3->setValue(24);
-        progressBar_cell8 = new QProgressBar(centralwidget);
-        progressBar_cell8->setObjectName(QString::fromUtf8("progressBar_cell8"));
-        progressBar_cell8->setGeometry(QRect(792, 485, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell8->sizePolicy().hasHeightForWidth());
-        progressBar_cell8->setSizePolicy(sizePolicy);
-        progressBar_cell8->setMinimumSize(QSize(250, 50));
-        progressBar_cell8->setValue(24);
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(10, 485, 30, 50));
         label_3->setMinimumSize(QSize(30, 50));
         label_3->setFont(font);
-        progressBar_cell6 = new QProgressBar(centralwidget);
-        progressBar_cell6->setObjectName(QString::fromUtf8("progressBar_cell6"));
-        progressBar_cell6->setGeometry(QRect(419, 565, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell6->sizePolicy().hasHeightForWidth());
-        progressBar_cell6->setSizePolicy(sizePolicy);
-        progressBar_cell6->setMinimumSize(QSize(250, 50));
-        progressBar_cell6->setValue(24);
-        progressBar_cell2 = new QProgressBar(centralwidget);
-        progressBar_cell2->setObjectName(QString::fromUtf8("progressBar_cell2"));
-        progressBar_cell2->setGeometry(QRect(46, 485, 250, 50));
-        sizePolicy.setHeightForWidth(progressBar_cell2->sizePolicy().hasHeightForWidth());
-        progressBar_cell2->setSizePolicy(sizePolicy);
-        progressBar_cell2->setMinimumSize(QSize(250, 50));
-        progressBar_cell2->setValue(24);
         label_13 = new QLabel(centralwidget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
         label_13->setGeometry(QRect(383, 405, 30, 50));
         label_13->setMinimumSize(QSize(30, 50));
         label_13->setFont(font);
-        cell8_voltage = new QLabel(centralwidget);
-        cell8_voltage->setObjectName(QString::fromUtf8("cell8_voltage"));
-        cell8_voltage->setGeometry(QRect(1027, 485, 90, 50));
-        cell8_voltage->setMinimumSize(QSize(90, 50));
-        cell8_voltage->setFont(font);
-        cell8_voltage->setTextFormat(Qt::PlainText);
-        cell8_voltage->setAlignment(Qt::AlignCenter);
+        UV_status = new QLabel(centralwidget);
+        UV_status->setObjectName(QString::fromUtf8("UV_status"));
+        UV_status->setGeometry(QRect(631, 83, 150, 50));
+        UV_status->setMinimumSize(QSize(120, 50));
+        UV_status->setFont(font);
+        UV_status->setTextFormat(Qt::PlainText);
+        UV_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        OV_status = new QLabel(centralwidget);
+        OV_status->setObjectName(QString::fromUtf8("OV_status"));
+        OV_status->setGeometry(QRect(631, 141, 150, 50));
+        OV_status->setMinimumSize(QSize(150, 50));
+        OV_status->setFont(font);
+        OV_status->setTextFormat(Qt::PlainText);
+        OV_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        SC_status = new QLabel(centralwidget);
+        SC_status->setObjectName(QString::fromUtf8("SC_status"));
+        SC_status->setGeometry(QRect(631, 199, 150, 50));
+        SC_status->setMinimumSize(QSize(150, 50));
+        SC_status->setFont(font);
+        SC_status->setTextFormat(Qt::PlainText);
+        SC_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        OC_status = new QLabel(centralwidget);
+        OC_status->setObjectName(QString::fromUtf8("OC_status"));
+        OC_status->setGeometry(QRect(837, 83, 150, 50));
+        OC_status->setMinimumSize(QSize(150, 50));
+        OC_status->setFont(font);
+        OC_status->setTextFormat(Qt::PlainText);
+        OC_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        OT_status = new QLabel(centralwidget);
+        OT_status->setObjectName(QString::fromUtf8("OT_status"));
+        OT_status->setGeometry(QRect(837, 141, 150, 50));
+        OT_status->setMinimumSize(QSize(150, 50));
+        OT_status->setFont(font);
+        OT_status->setTextFormat(Qt::PlainText);
+        OT_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        fault_status = new QLabel(centralwidget);
+        fault_status->setObjectName(QString::fromUtf8("fault_status"));
+        fault_status->setGeometry(QRect(837, 199, 150, 50));
+        fault_status->setMinimumSize(QSize(150, 50));
+        fault_status->setFont(font);
+        fault_status->setTextFormat(Qt::PlainText);
+        fault_status->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(46, 405, 322, 52));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell1 = new QProgressBar(layoutWidget);
+        progressBar_cell1->setObjectName(QString::fromUtf8("progressBar_cell1"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(progressBar_cell1->sizePolicy().hasHeightForWidth());
+        progressBar_cell1->setSizePolicy(sizePolicy);
+        progressBar_cell1->setMinimumSize(QSize(250, 50));
+        progressBar_cell1->setValue(24);
+
+        horizontalLayout->addWidget(progressBar_cell1);
+
+        V_cell_1 = new QLCDNumber(layoutWidget);
+        V_cell_1->setObjectName(QString::fromUtf8("V_cell_1"));
+        V_cell_1->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_1->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout->addWidget(V_cell_1);
+
+        layoutWidget1 = new QWidget(centralwidget);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(46, 485, 322, 52));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell2 = new QProgressBar(layoutWidget1);
+        progressBar_cell2->setObjectName(QString::fromUtf8("progressBar_cell2"));
+        sizePolicy.setHeightForWidth(progressBar_cell2->sizePolicy().hasHeightForWidth());
+        progressBar_cell2->setSizePolicy(sizePolicy);
+        progressBar_cell2->setMinimumSize(QSize(250, 50));
+        progressBar_cell2->setValue(24);
+
+        horizontalLayout_2->addWidget(progressBar_cell2);
+
+        V_cell_2 = new QLCDNumber(layoutWidget1);
+        V_cell_2->setObjectName(QString::fromUtf8("V_cell_2"));
+        V_cell_2->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_2->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_2->addWidget(V_cell_2);
+
+        layoutWidget2 = new QWidget(centralwidget);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(46, 565, 322, 52));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell3 = new QProgressBar(layoutWidget2);
+        progressBar_cell3->setObjectName(QString::fromUtf8("progressBar_cell3"));
+        sizePolicy.setHeightForWidth(progressBar_cell3->sizePolicy().hasHeightForWidth());
+        progressBar_cell3->setSizePolicy(sizePolicy);
+        progressBar_cell3->setMinimumSize(QSize(250, 50));
+        progressBar_cell3->setValue(24);
+
+        horizontalLayout_3->addWidget(progressBar_cell3);
+
+        V_cell_3 = new QLCDNumber(layoutWidget2);
+        V_cell_3->setObjectName(QString::fromUtf8("V_cell_3"));
+        V_cell_3->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_3->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_3->addWidget(V_cell_3);
+
+        layoutWidget3 = new QWidget(centralwidget);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(419, 405, 322, 52));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget3);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell4 = new QProgressBar(layoutWidget3);
+        progressBar_cell4->setObjectName(QString::fromUtf8("progressBar_cell4"));
+        sizePolicy.setHeightForWidth(progressBar_cell4->sizePolicy().hasHeightForWidth());
+        progressBar_cell4->setSizePolicy(sizePolicy);
+        progressBar_cell4->setMinimumSize(QSize(250, 50));
+        progressBar_cell4->setValue(24);
+
+        horizontalLayout_4->addWidget(progressBar_cell4);
+
+        V_cell_4 = new QLCDNumber(layoutWidget3);
+        V_cell_4->setObjectName(QString::fromUtf8("V_cell_4"));
+        V_cell_4->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_4->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_4->addWidget(V_cell_4);
+
+        layoutWidget4 = new QWidget(centralwidget);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(419, 485, 322, 52));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget4);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell5 = new QProgressBar(layoutWidget4);
+        progressBar_cell5->setObjectName(QString::fromUtf8("progressBar_cell5"));
+        sizePolicy.setHeightForWidth(progressBar_cell5->sizePolicy().hasHeightForWidth());
+        progressBar_cell5->setSizePolicy(sizePolicy);
+        progressBar_cell5->setMinimumSize(QSize(250, 50));
+        progressBar_cell5->setValue(24);
+
+        horizontalLayout_5->addWidget(progressBar_cell5);
+
+        V_cell_5 = new QLCDNumber(layoutWidget4);
+        V_cell_5->setObjectName(QString::fromUtf8("V_cell_5"));
+        V_cell_5->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_5->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_5->addWidget(V_cell_5);
+
+        layoutWidget5 = new QWidget(centralwidget);
+        layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
+        layoutWidget5->setGeometry(QRect(419, 565, 322, 52));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget5);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell6 = new QProgressBar(layoutWidget5);
+        progressBar_cell6->setObjectName(QString::fromUtf8("progressBar_cell6"));
+        sizePolicy.setHeightForWidth(progressBar_cell6->sizePolicy().hasHeightForWidth());
+        progressBar_cell6->setSizePolicy(sizePolicy);
+        progressBar_cell6->setMinimumSize(QSize(250, 50));
+        progressBar_cell6->setValue(24);
+
+        horizontalLayout_6->addWidget(progressBar_cell6);
+
+        V_cell_6 = new QLCDNumber(layoutWidget5);
+        V_cell_6->setObjectName(QString::fromUtf8("V_cell_6"));
+        V_cell_6->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_6->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_6->addWidget(V_cell_6);
+
+        layoutWidget6 = new QWidget(centralwidget);
+        layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
+        layoutWidget6->setGeometry(QRect(792, 405, 322, 52));
+        horizontalLayout_7 = new QHBoxLayout(layoutWidget6);
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell7 = new QProgressBar(layoutWidget6);
+        progressBar_cell7->setObjectName(QString::fromUtf8("progressBar_cell7"));
+        sizePolicy.setHeightForWidth(progressBar_cell7->sizePolicy().hasHeightForWidth());
+        progressBar_cell7->setSizePolicy(sizePolicy);
+        progressBar_cell7->setMinimumSize(QSize(250, 50));
+        progressBar_cell7->setValue(24);
+
+        horizontalLayout_7->addWidget(progressBar_cell7);
+
+        V_cell_7 = new QLCDNumber(layoutWidget6);
+        V_cell_7->setObjectName(QString::fromUtf8("V_cell_7"));
+        V_cell_7->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_7->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_7->addWidget(V_cell_7);
+
+        layoutWidget7 = new QWidget(centralwidget);
+        layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
+        layoutWidget7->setGeometry(QRect(792, 480, 322, 52));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget7);
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell8 = new QProgressBar(layoutWidget7);
+        progressBar_cell8->setObjectName(QString::fromUtf8("progressBar_cell8"));
+        sizePolicy.setHeightForWidth(progressBar_cell8->sizePolicy().hasHeightForWidth());
+        progressBar_cell8->setSizePolicy(sizePolicy);
+        progressBar_cell8->setMinimumSize(QSize(250, 50));
+        progressBar_cell8->setValue(24);
+
+        horizontalLayout_8->addWidget(progressBar_cell8);
+
+        V_cell_8 = new QLCDNumber(layoutWidget7);
+        V_cell_8->setObjectName(QString::fromUtf8("V_cell_8"));
+        V_cell_8->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_8->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_8->addWidget(V_cell_8);
+
+        layoutWidget8 = new QWidget(centralwidget);
+        layoutWidget8->setObjectName(QString::fromUtf8("layoutWidget8"));
+        layoutWidget8->setGeometry(QRect(792, 565, 322, 52));
+        horizontalLayout_9 = new QHBoxLayout(layoutWidget8);
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
+        progressBar_cell9 = new QProgressBar(layoutWidget8);
+        progressBar_cell9->setObjectName(QString::fromUtf8("progressBar_cell9"));
+        sizePolicy.setHeightForWidth(progressBar_cell9->sizePolicy().hasHeightForWidth());
+        progressBar_cell9->setSizePolicy(sizePolicy);
+        progressBar_cell9->setMinimumSize(QSize(250, 50));
+        progressBar_cell9->setValue(24);
+
+        horizontalLayout_9->addWidget(progressBar_cell9);
+
+        V_cell_9 = new QLCDNumber(layoutWidget8);
+        V_cell_9->setObjectName(QString::fromUtf8("V_cell_9"));
+        QFont font1;
+        font1.setBold(false);
+        V_cell_9->setFont(font1);
+        V_cell_9->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+        V_cell_9->setSegmentStyle(QLCDNumber::Flat);
+
+        horizontalLayout_9->addWidget(V_cell_9);
+
+        layoutWidget9 = new QWidget(centralwidget);
+        layoutWidget9->setObjectName(QString::fromUtf8("layoutWidget9"));
+        layoutWidget9->setGeometry(QRect(325, 199, 272, 52));
+        horizontalLayout_10 = new QHBoxLayout(layoutWidget9);
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
+        label_42 = new QLabel(layoutWidget9);
+        label_42->setObjectName(QString::fromUtf8("label_42"));
+        label_42->setMinimumSize(QSize(200, 50));
+        label_42->setFont(font);
+        label_42->setTextFormat(Qt::PlainText);
+        label_42->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_10->addWidget(label_42);
+
+        lcd_current = new QLCDNumber(layoutWidget9);
+        lcd_current->setObjectName(QString::fromUtf8("lcd_current"));
+        lcd_current->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"    color: rgb(38, 162, 105);    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+
+        horizontalLayout_10->addWidget(lcd_current);
+
+        widget = new QWidget(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(325, 83, 272, 52));
+        horizontalLayout_11 = new QHBoxLayout(widget);
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
+        label_38 = new QLabel(widget);
+        label_38->setObjectName(QString::fromUtf8("label_38"));
+        label_38->setMinimumSize(QSize(200, 50));
+        label_38->setFont(font);
+        label_38->setTextFormat(Qt::PlainText);
+        label_38->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_11->addWidget(label_38);
+
+        lcd_soc = new QLCDNumber(widget);
+        lcd_soc->setObjectName(QString::fromUtf8("lcd_soc"));
+        lcd_soc->setStyleSheet(QString::fromUtf8("QLCDNumber{\n"
+"	border-color: rgb(38, 162, 105);\n"
+"    color: rgb(38, 162, 105);\n"
+"	font: 700 14pt \"Ubuntu\";\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}"));
+
+        horizontalLayout_11->addWidget(lcd_soc);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -463,49 +600,37 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "01", nullptr));
-        cell1_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        cell2_voltage4->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        cell3_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_25->setText(QCoreApplication::translate("MainWindow", "[mV]", nullptr));
         label_28->setText(QCoreApplication::translate("MainWindow", "Cell Voltage", nullptr));
         label_29->setText(QCoreApplication::translate("MainWindow", "Cell Voltage", nullptr));
         label_26->setText(QCoreApplication::translate("MainWindow", "[mV]", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "Cell Voltage", nullptr));
         label_27->setText(QCoreApplication::translate("MainWindow", "[mV]", nullptr));
-        label_31->setText(QCoreApplication::translate("MainWindow", "Battery Status", nullptr));
-        label_32->setText(QCoreApplication::translate("MainWindow", "Battery Voltage", nullptr));
+        label_32->setText(QCoreApplication::translate("MainWindow", "Battery Voltage (V)", nullptr));
         battery_Voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_34->setText(QCoreApplication::translate("MainWindow", "Current Temperature", nullptr));
+        label_34->setText(QCoreApplication::translate("MainWindow", "Cell Temperature(\302\260C)", nullptr));
         soh->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        label_42->setText(QCoreApplication::translate("MainWindow", "Current", nullptr));
-        label_40->setText(QCoreApplication::translate("MainWindow", "SOH", nullptr));
+        label_40->setText(QCoreApplication::translate("MainWindow", "SOH(%)", nullptr));
         cells_count->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         battery_temperature->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        soc->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        label_38->setText(QCoreApplication::translate("MainWindow", "SoC", nullptr));
         label_36->setText(QCoreApplication::translate("MainWindow", "Cells Count", nullptr));
-        current->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        fault->setText(QString());
-        charge_status->setText(QString());
-        label_52->setText(QCoreApplication::translate("MainWindow", "Discharge", nullptr));
-        label_51->setText(QCoreApplication::translate("MainWindow", "Charge:", nullptr));
-        label_53->setText(QCoreApplication::translate("MainWindow", "Fault:", nullptr));
-        discharge_status->setText(QString());
         label_23->setText(QCoreApplication::translate("MainWindow", "09", nullptr));
-        cell7_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "05", nullptr));
-        cell9_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "03", nullptr));
-        cell6_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
-        cell5_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "06", nullptr));
         label_19->setText(QCoreApplication::translate("MainWindow", "07", nullptr));
-        cell4_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
         label_21->setText(QCoreApplication::translate("MainWindow", "08", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "02", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "04", nullptr));
-        cell8_voltage->setText(QCoreApplication::translate("MainWindow", "0000", nullptr));
+        UV_status->setText(QCoreApplication::translate("MainWindow", "Under Voltage", nullptr));
+        OV_status->setText(QCoreApplication::translate("MainWindow", "Over Voltage", nullptr));
+        SC_status->setText(QCoreApplication::translate("MainWindow", "Shor Circuit", nullptr));
+        OC_status->setText(QCoreApplication::translate("MainWindow", "Over Current", nullptr));
+        OT_status->setText(QCoreApplication::translate("MainWindow", "Over Temp", nullptr));
+        fault_status->setText(QCoreApplication::translate("MainWindow", "Fault Recovery", nullptr));
+        label_42->setText(QCoreApplication::translate("MainWindow", "Current(Amps)", nullptr));
+        label_38->setText(QCoreApplication::translate("MainWindow", "SoC (%)", nullptr));
     } // retranslateUi
 
 };

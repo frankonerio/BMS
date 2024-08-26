@@ -1,0 +1,93 @@
+[0.033s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/frank/thesis_ws/bms_gui/src -DCMAKE_INSTALL_PREFIX=/home/frank/thesis_ws/bms_gui/install/bms_gui
+[0.065s] -- The C compiler identification is GNU 11.4.0
+[0.099s] -- The CXX compiler identification is GNU 11.4.0
+[0.104s] -- Detecting C compiler ABI info
+[0.143s] -- Detecting C compiler ABI info - done
+[0.153s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.153s] -- Detecting C compile features
+[0.153s] -- Detecting C compile features - done
+[0.155s] -- Detecting CXX compiler ABI info
+[0.199s] -- Detecting CXX compiler ABI info - done
+[0.209s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.209s] -- Detecting CXX compile features
+[0.210s] -- Detecting CXX compile features - done
+[0.211s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.288s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.336s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.363s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.366s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.370s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.379s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.391s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.435s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.437s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.493s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+[0.511s] -- Found FastRTPS: /opt/ros/humble/include
+[0.541s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.546s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.586s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.587s] -- Found Threads: TRUE
+[0.708s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.71.0") found components: thread
+[0.709s] -- Found rclcpp_action: 16.0.9 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.772s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.860s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2")
+[0.861s] -- Checking for module 'libmodbus'
+[0.867s] --   Found libmodbus, version 3.1.10
+[0.886s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.937s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.937s] -- Configured cppcheck include dirs: /home/frank/thesis_ws/bms_gui/src/include
+[0.937s] -- Configured cppcheck exclude dirs and/or files: 
+[0.938s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.940s] -- Added test 'lint_cmake' to check CMake code style
+[0.941s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.946s] -- Added test 'uncrustify' to check C / C++ code style
+[0.946s] -- Configured uncrustify additional arguments: 
+[0.947s] -- Added test 'xmllint' to check XML markup files
+[0.947s] -- Configuring done (0.9s)
+[0.956s] -- Generating done (0.0s)
+[0.957s] -- Build files have been written to: /home/frank/thesis_ws/bms_gui/build/bms_gui
+[0.965s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/frank/thesis_ws/bms_gui/src -DCMAKE_INSTALL_PREFIX=/home/frank/thesis_ws/bms_gui/install/bms_gui
+[0.966s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.980s] [  9%] [34m[1mGenerating ui_mainwindow.h[0m
+[0.980s] [ 18%] [34m[1mGenerating build/bms_gui/moc_ui_mainwindow.cpp[0m
+[0.980s] [ 27%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[0.980s] [ 36%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[0.983s] /home/frank/thesis_ws/bms_gui/src/build/bms_gui/ui_mainwindow.h:0: Note: No relevant classes found. No output generated.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget3'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget4'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget5'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget6'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget7'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget8'.
+[0.984s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget9'.
+[0.991s] [ 63%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o[0m
+[0.991s] [ 63%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[0.991s] [ 63%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.991s] [ 72%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[0.991s] [ 81%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.991s] [ 90%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[4.910s] [100%] [32m[1mLinking CXX executable bms_gui[0m
+[5.325s] [100%] Built target bms_gui
+[5.329s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[5.350s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis_ws/bms_gui/build/bms_gui
+[5.352s] -- Install configuration: ""
+[5.352s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui
+[5.353s] -- Set non-toolchain portion of runtime path of "/home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui" to ""
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/package_run_dependencies/bms_gui
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/parent_prefix_path/bms_gui
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.sh
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.dsv
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.sh
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.dsv
+[5.353s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.bash
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.sh
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.zsh
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.dsv
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.dsv
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/packages/bms_gui
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig.cmake
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig-version.cmake
+[5.354s] -- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.xml
+[5.355s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/frank/thesis_ws/bms_gui/build/bms_gui

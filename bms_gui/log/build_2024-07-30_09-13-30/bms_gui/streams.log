@@ -1,0 +1,32 @@
+[0.034s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.065s] [ 11%] [34m[1mGenerating ui_mainwindow.h[0m
+[0.065s] [ 22%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[0.065s] [ 33%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+[0.068s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
+[0.068s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.
+[0.068s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget3'.
+[0.068s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget4'.
+[0.068s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget5'.
+[0.069s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget6'.
+[0.069s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget7'.
+[0.069s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget8'.
+[0.069s] /home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget9'.
+[0.116s] [ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.116s] [ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.116s] [ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[0.117s] [ 77%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[0.117s] [ 88%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[2.517s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[2.517s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Ksoc[m[K’; did you mean ‘[01m[Ksoh[m[K’?
+[2.517s]    30 |         ui->[01;31m[Ksoc[m[K->clear();
+[2.517s]       |             [01;31m[K^~~[m[K
+[2.517s]       |             [32m[Ksoh[m[K
+[2.517s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:32:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Kcurrent[m[K’; did you mean ‘[01m[Klcd_current[m[K’?
+[2.517s]    32 |         ui->[01;31m[Kcurrent[m[K->clear();
+[2.517s]       |             [01;31m[K^~~~~~~[m[K
+[2.517s]       |             [32m[Klcd_current[m[K
+[2.945s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.945s] gmake[2]: *** Waiting for unfinished jobs....
+[3.783s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[3.783s] gmake: *** [Makefile:146: all] Error 2
+[3.785s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

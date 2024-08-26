@@ -1,0 +1,12 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Ksoc[m[K’; did you mean ‘[01m[Ksoh[m[K’?
+   30 |         ui->[01;31m[Ksoc[m[K->clear();
+      |             [01;31m[K^~~[m[K
+      |             [32m[Ksoh[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:32:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Kcurrent[m[K’; did you mean ‘[01m[Klcd_current[m[K’?
+   32 |         ui->[01;31m[Kcurrent[m[K->clear();
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Klcd_current[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

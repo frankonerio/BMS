@@ -1,0 +1,12 @@
+UV_Fault
+OV_Fault
+SCD_Fault
+OCD_Fault
+ProtectionsTriggered
+alarm
+AccumulatedCharge_Int
+AccumulatedCharge_Frac
+coulumbs
+min_vcell
+releasable_capacity
+holding_register

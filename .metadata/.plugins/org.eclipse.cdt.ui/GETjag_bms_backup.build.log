@@ -1,0 +1,10 @@
+14:11:25 **** Incremental Build of configuration Debug for project GETjag_bms_backup ****
+make -j16 all 
+arm-none-eabi-size  GETjag_bms_backup.elf 
+   text	   data	    bss	    dec	    hex	filename
+  58680	    280	  86136	 145096	  236c8	GETjag_bms_backup.elf
+Finished building: default.size.stdout
+ 
+
+14:11:26 Build Finished. 0 errors, 0 warnings. (took 173ms)
+

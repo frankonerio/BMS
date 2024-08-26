@@ -1,0 +1,25 @@
+[0.039s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.055s] [ 11%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[0.057s] /home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61: Warning: Function declaration MainWindow::lcd_cell1_update contains extra qualification. Ignoring as signal or slot.
+[0.075s] [ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[0.075s] [ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[0.075s] [ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[2.416s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/main.cpp:1[m[K:
+[2.416s] [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.416s]    61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+[2.416s]       |          [01;31m[K^~~~~~~~~~[m[K
+[2.421s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[2.421s] [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.421s]    61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+[2.421s]       |          [01;31m[K^~~~~~~~~~[m[K
+[2.428s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_mainwindow.cpp:10[m[K:
+[2.428s] [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.428s]    61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+[2.428s]       |          [01;31m[K^~~~~~~~~~[m[K
+[2.844s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:88: CMakeFiles/bms_gui.dir/src/main.cpp.o] Error 1
+[2.844s] gmake[2]: *** Waiting for unfinished jobs....
+[2.866s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:130: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o] Error 1
+[2.879s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.879s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.880s] gmake: *** [Makefile:146: all] Error 2
+[2.881s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

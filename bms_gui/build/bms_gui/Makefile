@@ -210,6 +210,30 @@ bms_gui/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build
 .PHONY : bms_gui/fast
 
+build/bms_gui/moc_ui_mainwindow.o: build/bms_gui/moc_ui_mainwindow.cpp.o
+.PHONY : build/bms_gui/moc_ui_mainwindow.o
+
+# target to build an object file
+build/bms_gui/moc_ui_mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o
+.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.o
+
+build/bms_gui/moc_ui_mainwindow.i: build/bms_gui/moc_ui_mainwindow.cpp.i
+.PHONY : build/bms_gui/moc_ui_mainwindow.i
+
+# target to preprocess a source file
+build/bms_gui/moc_ui_mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.i
+.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.i
+
+build/bms_gui/moc_ui_mainwindow.s: build/bms_gui/moc_ui_mainwindow.cpp.s
+.PHONY : build/bms_gui/moc_ui_mainwindow.s
+
+# target to generate assembly for a file
+build/bms_gui/moc_ui_mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bms_gui.dir/build.make CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.s
+.PHONY : build/bms_gui/moc_ui_mainwindow.cpp.s
+
 include/bms_gui/moc_mainwindow.o: include/bms_gui/moc_mainwindow.cpp.o
 .PHONY : include/bms_gui/moc_mainwindow.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... bms_gui_uninstall"
 	@echo "... uninstall"
 	@echo "... bms_gui"
+	@echo "... build/bms_gui/moc_ui_mainwindow.o"
+	@echo "... build/bms_gui/moc_ui_mainwindow.i"
+	@echo "... build/bms_gui/moc_ui_mainwindow.s"
 	@echo "... include/bms_gui/moc_mainwindow.o"
 	@echo "... include/bms_gui/moc_mainwindow.i"
 	@echo "... include/bms_gui/moc_mainwindow.s"
