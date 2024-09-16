@@ -67,6 +67,8 @@ void Error_Handler(void);
 #define LED_2_GPIO_Port GPIOB
 #define SPI_INT_Pin GPIO_PIN_15
 #define SPI_INT_GPIO_Port GPIOB
+#define BQ_RESET_Pin GPIO_PIN_9
+#define BQ_RESET_GPIO_Port GPIOC
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
 #define BUZZER_Pin GPIO_PIN_11

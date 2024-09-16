@@ -1,102 +1,56 @@
-10:14:12 **** Incremental Build of configuration Debug for project test ****
+14:10:33 **** Incremental Build of configuration Debug for project GETjag_bms ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Src/main.c:25:
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500" -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Inc/BQ769x2Header.h:24:16: warning: unsigned conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '37288' to '168' [-Woverflow]
-   24 | #define CCGain 0x91A8      //Calibration:Current:CC Gain
-      |                ^~~~~~
-../Core/Src/main.c:819:32: note: in expansion of macro 'CCGain'
-  819 |                 DirectCommands(CCGain, 0x00, R);
-      |                                ^~~~~~
-../Core/Src/main.c:880:25: warning: unused variable 'alarmStatus1' [-Wunused-variable]
-  880 |                 uint8_t alarmStatus1 = RX_data[1];
-      |                         ^~~~~~~~~~~~
-../Core/Src/main.c:879:25: warning: unused variable 'alarmstatus' [-Wunused-variable]
-  879 |                 uint8_t alarmstatus = RX_data[0];
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:876:25: warning: unused variable 'alarmEnable1' [-Wunused-variable]
-  876 |                 uint8_t alarmEnable1 = RX_data[1];
-      |                         ^~~~~~~~~~~~
-../Core/Src/main.c:875:25: warning: unused variable 'alarmEnable' [-Wunused-variable]
-  875 |                 uint8_t alarmEnable = RX_data[0];
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:821:33: warning: unused variable 'reg1' [-Wunused-variable]
-  821 |                         uint8_t reg1 = RX_data[1];
-      |                                 ^~~~
-../Core/Src/main.c:820:33: warning: unused variable 'reg0' [-Wunused-variable]
-  820 |                         uint8_t reg0 = RX_data[0];
-      |                                 ^~~~
-../Core/Src/main.c:817:25: warning: variable 'status2' set but not used [-Wunused-but-set-variable]
-  817 |                 uint8_t status2 = RX_data[1];
-      |                         ^~~~~~~
-../Core/Src/main.c:816:25: warning: variable 'status1' set but not used [-Wunused-but-set-variable]
-  816 |                 uint8_t status1 = RX_data[0];
-      |                         ^~~~~~~
-../Core/Src/main.c:809:20: warning: unused variable 'cell16' [-Wunused-variable]
-  809 |           uint16_t cell16 = CellVoltage[15];
-      |                    ^~~~~~
-../Core/Src/main.c:808:20: warning: unused variable 'cell6' [-Wunused-variable]
-  808 |           uint16_t cell6 = CellVoltage[5];
-      |                    ^~~~~
-../Core/Src/main.c:807:20: warning: unused variable 'cell5' [-Wunused-variable]
-  807 |           uint16_t cell5 = CellVoltage[4];
-      |                    ^~~~~
-../Core/Src/main.c:806:20: warning: unused variable 'cell4' [-Wunused-variable]
-  806 |           uint16_t cell4 = CellVoltage[3];
-      |                    ^~~~~
-../Core/Src/main.c:805:20: warning: unused variable 'cell3' [-Wunused-variable]
-  805 |           uint16_t cell3 = CellVoltage[2];
-      |                    ^~~~~
-../Core/Src/main.c:804:20: warning: unused variable 'cell2' [-Wunused-variable]
-  804 |           uint16_t cell2 = CellVoltage[1];
-      |                    ^~~~~
-../Core/Src/main.c:803:20: warning: unused variable 'cell1' [-Wunused-variable]
-  803 |           uint16_t cell1 = CellVoltage[0];
-      |                    ^~~~~
-../Core/Src/main.c:801:17: warning: unused variable 'ts1_temperature' [-Wunused-variable]
-  801 |           float ts1_temperature = BQ769x2_ReadTemperature(TS1Temperature);
-      |                 ^~~~~~~~~~~~~~~
-../Core/Src/main.c:800:20: warning: unused variable 'packVoltage' [-Wunused-variable]
-  800 |           uint16_t packVoltage = BQ769x2_ReadVoltage(Pack_Voltage);
-      |                    ^~~~~~~~~~~
-../Core/Src/main.c:799:20: warning: unused variable 'stackVoltage' [-Wunused-variable]
-  799 |           uint16_t stackVoltage = BQ769x2_ReadVoltage(StackVoltage);
-      |                    ^~~~~~~~~~~~
-../Core/Src/main.c:761:18: warning: unused variable 'FET_options' [-Wunused-variable]
-  761 |         uint16_t FET_options = BQ769x2_ReadRegister(FETOptions);
-      |                  ^~~~~~~~~~~
-../Core/Src/main.c:760:18: warning: unused variable 'manuData' [-Wunused-variable]
-  760 |         uint16_t manuData = BQ769x2_ReadRegister(MANU_DATA);
-      |                  ^~~~~~~~
-../Core/Src/main.c:759:18: warning: unused variable 'manuInit' [-Wunused-variable]
-  759 |         uint16_t manuInit = BQ769x2_ReadRegister(MfgStatusInit);
-      |                  ^~~~~~~~
-../Core/Src/main.c:758:18: warning: unused variable 'manuStatus' [-Wunused-variable]
-  758 |         uint16_t manuStatus = BQ769x2_ReadRegister(MANUFACTURINGSTATUS);
-      |                  ^~~~~~~~~~
-arm-none-eabi-gcc -o "test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/test/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/home/frank/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: test.elf has a LOAD segment with RWX permissions
-Finished building target: test.elf
+../Core/Src/main.c:350:12: warning: unused variable 'FET_options' [-Wunused-variable]
+  350 |   uint16_t FET_options = BQ769x2_ReadRegister(FETOptions);
+      |            ^~~~~~~~~~~
+../Core/Src/main.c:349:12: warning: unused variable 'manuData' [-Wunused-variable]
+  349 |   uint16_t manuData = BQ769x2_ReadRegister(MANU_DATA);
+      |            ^~~~~~~~
+../Core/Src/main.c:348:12: warning: unused variable 'manuInit' [-Wunused-variable]
+  348 |   uint16_t manuInit = BQ769x2_ReadRegister(MfgStatusInit);
+      |            ^~~~~~~~
+../Core/Src/main.c:347:12: warning: unused variable 'manuStatus' [-Wunused-variable]
+  347 |   uint16_t manuStatus = BQ769x2_ReadRegister(MANUFACTURINGSTATUS);
+      |            ^~~~~~~~~~
+../Core/Src/main.c: In function 'bms_state_machine_task':
+../Core/Src/main.c:840:14: warning: unused variable 'current' [-Wunused-variable]
+  840 |     uint16_t current = BQ769x2_ReadCurrent();
+      |              ^~~~~~~
+../Core/Src/main.c: In function 'read_voltage_task':
+../Core/Src/main.c:894:20: warning: unused variable 'current' [-Wunused-variable]
+  894 |           uint16_t current = BQ769x2_ReadCurrent();
+      |                    ^~~~~~~
+arm-none-eabi-gcc -o "GETjag_bms.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/GETjag_bms/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GETjag_bms.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/home/frank/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: GETjag_bms.elf has a LOAD segment with RWX permissions
+Finished building target: GETjag_bms.elf
  
-arm-none-eabi-size  test.elf 
-arm-none-eabi-objdump -h -S test.elf  > "test.list"
-arm-none-eabi-objcopy  -O ihex test.elf  "test.hex"
-arm-none-eabi-objcopy  -O binary test.elf  "test.bin"
+arm-none-eabi-size  GETjag_bms.elf 
+arm-none-eabi-objdump -h -S GETjag_bms.elf  > "GETjag_bms.list"
+arm-none-eabi-objcopy  -O ihex GETjag_bms.elf  "GETjag_bms.hex"
+arm-none-eabi-objcopy  -O binary GETjag_bms.elf  "GETjag_bms.bin"
    text	   data	    bss	    dec	    hex	filename
-  18204	     20	   1868	  20092	   4e7c	test.elf
+  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
 Finished building: default.size.stdout
  
-Finished building: test.bin
-Finished building: test.hex
+Finished building: GETjag_bms.hex
+Finished building: GETjag_bms.bin
  
  
-Finished building: test.list
+Finished building: GETjag_bms.list
  
-10:16:13 **** Incremental Build of configuration Debug for project GETjag_bms ****
+14:10:44 **** Incremental Build of configuration Debug for project GETjag_bms ****
 make -j16 all 
 arm-none-eabi-size  GETjag_bms.elf 
    text	   data	    bss	    dec	    hex	filename
-  55104	    320	  85952	 141376	  22840	GETjag_bms.elf
+  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
+Finished building: default.size.stdout
+ 
+14:10:45 **** Incremental Build of configuration Debug for project GETjag_bms ****
+make -j16 all 
+arm-none-eabi-size  GETjag_bms.elf 
+   text	   data	    bss	    dec	    hex	filename
+  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
 Finished building: default.size.stdout
  

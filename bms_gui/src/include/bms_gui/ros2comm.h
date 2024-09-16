@@ -64,6 +64,19 @@ signals:
     void cell4_voltage(int);
     void cell5_voltage(int);
     void cell6_voltage(int);
+    
+	void lcd_cell_1(int value);
+	void lcd_cell_2(int value);
+	void lcd_cell_3(int value);
+	void lcd_cell_4(int value);
+	void lcd_cell_5(int value);
+	void lcd_cell_6(int value);
+	void lcd_cell_7(int value);
+	void lcd_cell_8(int value);
+	void lcd_cell_9(int value);
+	void lcd_soc(int value);
+	
+
 };
 
 #endif // SRC_BMS_GUI__ROS2COMM_H

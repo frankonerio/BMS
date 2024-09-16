@@ -1,0 +1,155 @@
+[0.000000] (-) TimerEvent: {}
+[0.000194] (bms_gui) JobQueued: {'identifier': 'bms_gui', 'dependencies': OrderedDict()}
+[0.000407] (bms_gui) JobStarted: {'identifier': 'bms_gui'}
+[0.032450] (bms_gui) JobProgress: {'identifier': 'bms_gui', 'progress': 'cmake'}
+[0.032501] (bms_gui) Command: {'cmd': ['/usr/bin/cmake', '/home/frank/thesis_ws/bms_gui/src', '-DCMAKE_INSTALL_PREFIX=/home/frank/thesis_ws/bms_gui/install/bms_gui'], 'cwd': '/home/frank/thesis_ws/bms_gui/build/bms_gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'frank'), ('LC_TIME', 'uk_UA.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/frank/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/frank'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'uk_UA.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2435'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'frank'), ('_', '/home/frank/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('XILINX_VIVADO', '/opt/Xilinx/Vivado/Vivado/2020.1'), ('USERNAME', 'frank'), ('STM32_PRG_PATH', '/home/frank/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/Xilinx/Vivado/Vivado/2020.1/bin:/opt/Xilinx/Vivado/DocNav:/opt/ros/humble/bin:/home/frank/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/frank:@/tmp/.ICE-unix/2435,unix/frank:/tmp/.ICE-unix/2435'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'uk_UA.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e870eb14_88dd_4b8e_b058_da908dc27617'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'uk_UA.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.342'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'uk_UA.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'uk_UA.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'uk_UA.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/frank/thesis_ws/bms_gui/build/bms_gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'uk_UA.UTF-8'), ('LC_PAPER', 'uk_UA.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.064884] (bms_gui) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.098945] (bms_gui) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.099824] (-) TimerEvent: {}
+[0.104831] (bms_gui) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.143658] (bms_gui) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.153130] (bms_gui) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.153253] (bms_gui) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.153506] (bms_gui) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.155759] (bms_gui) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199586] (bms_gui) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.199889] (-) TimerEvent: {}
+[0.209515] (bms_gui) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.209834] (bms_gui) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.210232] (bms_gui) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.211716] (bms_gui) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.288729] (bms_gui) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[0.300033] (-) TimerEvent: {}
+[0.336587] (bms_gui) StdoutLine: {'line': b'-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.363390] (bms_gui) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.365963] (bms_gui) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.370817] (bms_gui) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.379271] (bms_gui) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.391178] (bms_gui) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400169] (-) TimerEvent: {}
+[0.435770] (bms_gui) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.437092] (bms_gui) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.493720] (bms_gui) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")\n'}
+[0.500300] (-) TimerEvent: {}
+[0.511676] (bms_gui) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include\n'}
+[0.541085] (bms_gui) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.546468] (bms_gui) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.586431] (bms_gui) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.587193] (bms_gui) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[0.600388] (-) TimerEvent: {}
+[0.700628] (-) TimerEvent: {}
+[0.708403] (bms_gui) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.71.0") found components: thread\n'}
+[0.709391] (bms_gui) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.9 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.772394] (bms_gui) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.800765] (-) TimerEvent: {}
+[0.860350] (bms_gui) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2")\n'}
+[0.860884] (bms_gui) StdoutLine: {'line': b"-- Checking for module 'libmodbus'\n"}
+[0.867116] (bms_gui) StdoutLine: {'line': b'--   Found libmodbus, version 3.1.10\n'}
+[0.886598] (bms_gui) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.900918] (-) TimerEvent: {}
+[0.937443] (bms_gui) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.937686] (bms_gui) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/frank/thesis_ws/bms_gui/src/include\n'}
+[0.937727] (bms_gui) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.938546] (bms_gui) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.939996] (bms_gui) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.941089] (bms_gui) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.946313] (bms_gui) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.946375] (bms_gui) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.947214] (bms_gui) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.947841] (bms_gui) StdoutLine: {'line': b'-- Configuring done (0.9s)\n'}
+[0.956247] (bms_gui) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.957521] (bms_gui) StdoutLine: {'line': b'-- Build files have been written to: /home/frank/thesis_ws/bms_gui/build/bms_gui\n'}
+[0.964984] (bms_gui) CommandEnded: {'returncode': 0}
+[0.965374] (bms_gui) JobProgress: {'identifier': 'bms_gui', 'progress': 'build'}
+[0.965924] (bms_gui) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/frank/thesis_ws/bms_gui/build/bms_gui', '--', '-j16', '-l16'], 'cwd': '/home/frank/thesis_ws/bms_gui/build/bms_gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'frank'), ('LC_TIME', 'uk_UA.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/frank/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/frank'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'uk_UA.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2435'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'frank'), ('_', '/home/frank/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('XILINX_VIVADO', '/opt/Xilinx/Vivado/Vivado/2020.1'), ('USERNAME', 'frank'), ('STM32_PRG_PATH', '/home/frank/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/Xilinx/Vivado/Vivado/2020.1/bin:/opt/Xilinx/Vivado/DocNav:/opt/ros/humble/bin:/home/frank/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/frank:@/tmp/.ICE-unix/2435,unix/frank:/tmp/.ICE-unix/2435'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'uk_UA.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e870eb14_88dd_4b8e_b058_da908dc27617'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'uk_UA.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.342'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'uk_UA.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'uk_UA.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'uk_UA.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/frank/thesis_ws/bms_gui/build/bms_gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'uk_UA.UTF-8'), ('LC_PAPER', 'uk_UA.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.980286] (bms_gui) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating ui_mainwindow.h\x1b[0m\n'}
+[0.980443] (bms_gui) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating build/bms_gui/moc_ui_mainwindow.cpp\x1b[0m\n'}
+[0.980505] (bms_gui) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating include/bms_gui/moc_mainwindow.cpp\x1b[0m\n'}
+[0.980563] (bms_gui) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating include/bms_gui/moc_ros2comm.cpp\x1b[0m\n'}
+[0.983032] (bms_gui) StderrLine: {'line': b'/home/frank/thesis_ws/bms_gui/src/build/bms_gui/ui_mainwindow.h:0: Note: No relevant classes found. No output generated.\n'}
+[0.984162] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.\n"}
+[0.984205] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.\n"}
+[0.984240] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget3'.\n"}
+[0.984271] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget4'.\n"}
+[0.984302] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget5'.\n"}
+[0.984332] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget6'.\n"}
+[0.984365] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget7'.\n"}
+[0.984395] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget8'.\n"}
+[0.984425] (bms_gui) StderrLine: {'line': b"/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget9'.\n"}
+[0.990972] (bms_gui) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/build/bms_gui/moc_ui_mainwindow.cpp.o\x1b[0m\n'}
+[0.991136] (bms_gui) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o\x1b[0m\n'}
+[0.991198] (bms_gui) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o\x1b[0m\n'}
+[0.991251] (bms_gui) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o\x1b[0m\n'}
+[0.991290] (bms_gui) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.991323] (bms_gui) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o\x1b[0m\n'}
+[1.001091] (-) TimerEvent: {}
+[1.101433] (-) TimerEvent: {}
+[1.201857] (-) TimerEvent: {}
+[1.302372] (-) TimerEvent: {}
+[1.402750] (-) TimerEvent: {}
+[1.503120] (-) TimerEvent: {}
+[1.603486] (-) TimerEvent: {}
+[1.703783] (-) TimerEvent: {}
+[1.804140] (-) TimerEvent: {}
+[1.904510] (-) TimerEvent: {}
+[2.004889] (-) TimerEvent: {}
+[2.105265] (-) TimerEvent: {}
+[2.205560] (-) TimerEvent: {}
+[2.305883] (-) TimerEvent: {}
+[2.406189] (-) TimerEvent: {}
+[2.506546] (-) TimerEvent: {}
+[2.606945] (-) TimerEvent: {}
+[2.707328] (-) TimerEvent: {}
+[2.807680] (-) TimerEvent: {}
+[2.908142] (-) TimerEvent: {}
+[3.008485] (-) TimerEvent: {}
+[3.108838] (-) TimerEvent: {}
+[3.209128] (-) TimerEvent: {}
+[3.309491] (-) TimerEvent: {}
+[3.409903] (-) TimerEvent: {}
+[3.510293] (-) TimerEvent: {}
+[3.610660] (-) TimerEvent: {}
+[3.711018] (-) TimerEvent: {}
+[3.811383] (-) TimerEvent: {}
+[3.911759] (-) TimerEvent: {}
+[4.012110] (-) TimerEvent: {}
+[4.112462] (-) TimerEvent: {}
+[4.212791] (-) TimerEvent: {}
+[4.313145] (-) TimerEvent: {}
+[4.413463] (-) TimerEvent: {}
+[4.513712] (-) TimerEvent: {}
+[4.614019] (-) TimerEvent: {}
+[4.714320] (-) TimerEvent: {}
+[4.814647] (-) TimerEvent: {}
+[4.910023] (bms_gui) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable bms_gui\x1b[0m\n'}
+[4.914742] (-) TimerEvent: {}
+[5.015008] (-) TimerEvent: {}
+[5.115353] (-) TimerEvent: {}
+[5.215716] (-) TimerEvent: {}
+[5.316055] (-) TimerEvent: {}
+[5.325173] (bms_gui) StdoutLine: {'line': b'[100%] Built target bms_gui\n'}
+[5.329089] (bms_gui) CommandEnded: {'returncode': 0}
+[5.347685] (bms_gui) JobProgress: {'identifier': 'bms_gui', 'progress': 'install'}
+[5.350065] (bms_gui) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/frank/thesis_ws/bms_gui/build/bms_gui'], 'cwd': '/home/frank/thesis_ws/bms_gui/build/bms_gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'frank'), ('LC_TIME', 'uk_UA.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/frank/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/frank'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'uk_UA.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2435'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'frank'), ('_', '/home/frank/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('XILINX_VIVADO', '/opt/Xilinx/Vivado/Vivado/2020.1'), ('USERNAME', 'frank'), ('STM32_PRG_PATH', '/home/frank/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/Xilinx/Vivado/Vivado/2020.1/bin:/opt/Xilinx/Vivado/DocNav:/opt/ros/humble/bin:/home/frank/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/frank:@/tmp/.ICE-unix/2435,unix/frank:/tmp/.ICE-unix/2435'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'uk_UA.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e870eb14_88dd_4b8e_b058_da908dc27617'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'uk_UA.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.342'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'uk_UA.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'uk_UA.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'uk_UA.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/frank/thesis_ws/bms_gui/build/bms_gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=516607eb06a7c059f5fb2d7966c71021'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'uk_UA.UTF-8'), ('LC_PAPER', 'uk_UA.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.352638] (bms_gui) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.352742] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui\n'}
+[5.353408] (bms_gui) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/frank/thesis_ws/bms_gui/install/bms_gui/lib/bms_gui/bms_gui" to ""\n'}
+[5.353461] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/package_run_dependencies/bms_gui\n'}
+[5.353548] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/parent_prefix_path/bms_gui\n'}
+[5.353657] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.sh\n'}
+[5.353711] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/ament_prefix_path.dsv\n'}
+[5.353767] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.sh\n'}
+[5.353823] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/environment/path.dsv\n'}
+[5.353879] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.bash\n'}
+[5.353941] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.sh\n'}
+[5.354004] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.zsh\n'}
+[5.354057] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/local_setup.dsv\n'}
+[5.354113] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.dsv\n'}
+[5.354188] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/ament_index/resource_index/packages/bms_gui\n'}
+[5.354261] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig.cmake\n'}
+[5.354307] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/cmake/bms_guiConfig-version.cmake\n'}
+[5.354361] (bms_gui) StdoutLine: {'line': b'-- Installing: /home/frank/thesis_ws/bms_gui/install/bms_gui/share/bms_gui/package.xml\n'}
+[5.355018] (bms_gui) CommandEnded: {'returncode': 0}
+[5.416139] (-) TimerEvent: {}
+[5.440350] (bms_gui) JobEnded: {'identifier': 'bms_gui', 'rc': 0}
+[5.440867] (-) EventReactorShutdown: {}

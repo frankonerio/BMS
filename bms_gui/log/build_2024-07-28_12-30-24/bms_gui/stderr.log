@@ -1,0 +1,19 @@
+/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61: Warning: Function declaration MainWindow::lcd_cell1_update contains extra qualification. Ignoring as signal or slot.
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/main.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+      |          [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+      |          [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_mainwindow.cpp:10[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/mainwindow.h:61:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMainWindow::[m[K’ on member ‘[01m[Klcd_cell1_update[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   61 |     void [01;31m[KMainWindow[m[K::lcd_cell1_update(float value);
+      |          [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:88: CMakeFiles/bms_gui.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:130: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

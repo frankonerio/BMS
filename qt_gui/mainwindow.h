@@ -30,6 +30,7 @@ private slots:
 
     void on_progressBar_cell6_valueChanged(int value);
 
+
 private:
     Ui::MainWindow *ui;
 };

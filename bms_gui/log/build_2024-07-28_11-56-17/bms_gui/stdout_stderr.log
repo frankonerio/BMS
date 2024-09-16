@@ -1,0 +1,26 @@
+[ 11%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/main.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+   24 | extern [01;31m[Ktab_dest[m[K[64];
+      |        [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/moc_mainwindow.cpp:10[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/build/bms_gui/include/bms_gui/../../../../src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+   24 | extern [01;31m[Ktab_dest[m[K[64];
+      |        [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:1[m[K:
+[01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/mainwindow.h:24:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ does not name a type
+   24 | extern [01;31m[Ktab_dest[m[K[64];
+      |        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell1_valueChanged(int)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:57:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ was not declared in this scope
+   57 |     [01;31m[Ktab_dest[m[K[6];
+      |     [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:88: CMakeFiles/bms_gui.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:130: CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

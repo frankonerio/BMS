@@ -1,0 +1,30 @@
+[ 11%] [34m[1mGenerating ui_mainwindow.h[0m
+[ 22%] [34m[1mGenerating include/bms_gui/moc_mainwindow.cpp[0m
+[ 33%] [34m[1mGenerating include/bms_gui/moc_ros2comm.cpp[0m
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget3'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget4'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget5'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget6'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget7'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget8'.
+/home/frank/thesis_ws/bms_gui/src/ui/mainwindow.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget9'.
+[ 44%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/main.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_mainwindow.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/include/bms_gui/moc_ros2comm.cpp.o[0m
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Ksoc[m[K’; did you mean ‘[01m[Ksoh[m[K’?
+   30 |         ui->[01;31m[Ksoc[m[K->clear();
+      |             [01;31m[K^~~[m[K
+      |             [32m[Ksoh[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:32:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Kcurrent[m[K’; did you mean ‘[01m[Klcd_current[m[K’?
+   32 |         ui->[01;31m[Kcurrent[m[K->clear();
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Klcd_current[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,11 @@
+[0.030s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.060s] [  9%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[2.111s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[2.111s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:87:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+[2.111s]    87 |         lcd_soc(tab_dest[9])[01;31m[K)[m[K;
+[2.111s]       |                             [01;31m[K^[m[K
+[2.111s]       |                             [32m[K;[m[K
+[2.724s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:120: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+[2.724s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.724s] gmake: *** [Makefile:146: all] Error 2
+[2.726s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16

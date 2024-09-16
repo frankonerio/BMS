@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GETjag_bms_backup/GETjag_bms.ioc&apos; to &apos;GETjag_bms_backup.ioc&apos;" description="Rename resource &apos;GETjag_bms.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="GETjag_bms.ioc" name="GETjag_bms_backup.ioc" stamp="1722249094388" updateReferences="true"/>
+</session>

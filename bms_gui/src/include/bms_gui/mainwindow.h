@@ -21,6 +21,8 @@
 #define FULL_VOLTAGE 4200
 #define EMPTY_VOLTAGE 3000
 
+extern uint16_t tab_dest[64];
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -44,16 +46,37 @@ private:
     
 
 private slots:
-    void on_progressBar_cell1_valueChanged(int value);
-   
-    void on_progressBar_cell2_valueChanged(int value);
+	void on_progressBar_cell1_valueChanged(int value);
 
-    void on_progressBar_cell3_valueChanged(int value);
+	void on_progressBar_cell2_valueChanged(int value);
 
-    void on_progressBar_cell4_valueChanged(int value);
+	void on_progressBar_cell3_valueChanged(int value);
 
-    void on_progressBar_cell5_valueChanged(int value);
+	void on_progressBar_cell4_valueChanged(int value);
 
-    void on_progressBar_cell6_valueChanged(int value);
+	void on_progressBar_cell5_valueChanged(int value);
+
+	void on_progressBar_cell6_valueChanged(int value);
+
+	void lcd_cell_1_voltage_update(int value);
+
+	void lcd_cell_2_voltage_update(int value);
+
+	void lcd_cell_3_voltage_update(int value);
+
+	void lcd_cell_4_voltage_update(int value);
+
+	void lcd_cell_5_voltage_update(int value);
+
+	void lcd_cell_6_voltage_update(int value);
+
+	void lcd_cell_7_voltage_update(int value);
+
+	void lcd_cell_8_voltage_update(int value);
+
+	void lcd_cell_9_voltage_update(int value);
+	
+	void lcd_soc_update(int value);
+
 };
 #endif // SRC_BMS_GUI_MAINWINDOW_H

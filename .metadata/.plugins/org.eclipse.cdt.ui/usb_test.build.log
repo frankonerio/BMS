@@ -1,0 +1,10 @@
+13:01:48 **** Build of configuration Debug for project usb_test ****
+make -j16 all 
+arm-none-eabi-size  usb_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30592	    268	   8708	  39568	   9a90	usb_test.elf
+Finished building: default.size.stdout
+ 
+
+13:01:48 Build Finished. 0 errors, 0 warnings. (took 174ms)
+

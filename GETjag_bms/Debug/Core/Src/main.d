@@ -51,7 +51,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/mpu_wrappers.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h \
- ../Core/Inc/BQ769x2Header.h
+ ../Core/Inc/BQ769x2Header.h ../Core/Inc/utils.h ../Core/Inc/bq_common.h \
+ ../Core/Inc/BQ769x2Header.h ../Core/Inc/soc_soh.h \
+ ../Core/Inc/look_up_table.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/semphr.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/queue.h \
+ /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h
 ../Core/Inc/main.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -108,3 +113,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h:
 ../Core/Inc/BQ769x2Header.h:
+../Core/Inc/utils.h:
+../Core/Inc/bq_common.h:
+../Core/Inc/BQ769x2Header.h:
+../Core/Inc/soc_soh.h:
+../Core/Inc/look_up_table.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/semphr.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/queue.h:
+/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h:

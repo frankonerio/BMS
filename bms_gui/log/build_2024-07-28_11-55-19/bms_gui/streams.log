@@ -1,0 +1,10 @@
+[0.031s] Invoking command in '/home/frank/thesis_ws/bms_gui/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
+[0.061s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o[0m
+[2.210s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_progressBar_cell1_valueChanged(int)[m[K’:
+[2.210s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/mainwindow.cpp:57:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktab_dest[m[K’ was not declared in this scope
+[2.210s]    57 |     [01;31m[Ktab_dest[m[K[6];
+[2.210s]       |     [01;31m[K^~~~~~~~[m[K
+[2.599s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:102: CMakeFiles/bms_gui.dir/src/mainwindow.cpp.o] Error 1
+[2.599s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.599s] gmake: *** [Makefile:146: all] Error 2
+[2.601s] Invoked command in '/home/frank/thesis_ws/bms_gui/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/build/bms_gui -- -j16 -l16
