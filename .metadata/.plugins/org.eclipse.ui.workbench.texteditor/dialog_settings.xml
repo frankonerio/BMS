@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ReadPass"/>
+		<item key="selection" value="data_ready_semaphore"/>
 		<list key="findhistory">
+			<item value="data_ready_semaphore"/>
+			<item value="modbus_ready_semaphore"/>
 			<item value="readpass"/>
 			<item value="read"/>
 			<item value="predischar"/>
@@ -21,17 +23,16 @@
 			<item value="safety"/>
 			<item value="AlarmBits"/>
 			<item value="alarm"/>
-			<item value="0x9343"/>
-			<item value="bal"/>
 		</list>
 		<list key="replacehistory">
+			<item value="data_ready_semaphore"/>
 			<item value="BQ76952_DEFAULT_ADDR &lt;&lt; 1"/>
 			<item value=" BQ76952_DEFAULT_ADDR&lt;&lt;1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-483"/>
-		<item key="DIALOG_Y_ORIGIN" value="635"/>
+		<item key="DIALOG_X_ORIGIN" value="-1234"/>
+		<item key="DIALOG_Y_ORIGIN" value="319"/>
 		<item key="DIALOG_WIDTH" value="363"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

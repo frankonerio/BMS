@@ -37,6 +37,7 @@
 #include "bq_common.h"
 #include "soc_soh.h"
 #include "semphr.h"
+#include "stdbool.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,12 +48,19 @@ typedef enum
   Bit_SET
 } BitAction;
 
+typedef enum {
+    STATE_WAIT_FOR_ETHERNET,
+    STATE_INIT_SOCKET,
+    STATE_WAIT_FOR_CLIENT,
+    STATE_COMMUNICATE_WITH_CLIENT
+} modbus_state_t;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 /* USER CODE BEGIN PD */
-#define HTTP_SOCKET 0
+
 // #define PORT_TCPS 5000
 #define DATA_BUF_SIZE 2048
 uint8_t gDATABUF[DATA_BUF_SIZE];
@@ -140,6 +148,7 @@ uint8_t recv_size;
 uint16_t cntSend = 0;
 
 uint8_t FrameNrBytes = 0;
+bool soc_ready = false;
 
 bms_context bms1;
 CellSelectRegister selected_cells = {.value = 0x801F}; // Assuming 6 cells are selected
@@ -170,6 +179,7 @@ uint16_t holding_register[64] = {
 float ocv_simple[11] = {4.16, 4.07, 3.99, 3.90, 3.82, 3.72, 3.61, 3.53, 3.38, 3.20, 2.85};
 float soc_simple[11] = {100.0, 90.0, 80.0, 70.0, 60.0, 50.0, 40.0, 30.0, 20.0, 10.0, 0.0};
 
+
 TaskHandle_t modbus_task_handle = NULL;
 TaskHandle_t soc_task_handle = NULL;
 TaskHandle_t read_voltage_task_handle = NULL;
@@ -179,6 +189,7 @@ BaseType_t status;
 uint8_t sr = 0x00;
 
 SemaphoreHandle_t data_ready_semaphore;
+SemaphoreHandle_t soc_ready_semaphore;
 
 /* USER CODE END PV */
 
@@ -320,9 +331,9 @@ int main(void)
   HAL_GPIO_WritePin(BQ_RESET_GPIO_Port, BQ_RESET_Pin, GPIO_PIN_SET);
   HAL_Delay(10);
   HAL_GPIO_WritePin(BQ_RESET_GPIO_Port, BQ_RESET_Pin, GPIO_PIN_RESET);
-  HAL_Delay(1000);
+  HAL_Delay(2000);
   CommandSubcommands(BQ769x2_RESET); // Resets the BQ769x2 registers
-  HAL_Delay(1000);
+  HAL_Delay(1200);
   BQ769x2_Init(); // Configure all of the BQ769x2 register settings
   delayUS(10000);
   CommandSubcommands(SLEEP_DISABLE); // Sleep mode is enabled by default. For this example, Sleep is disabled to
@@ -342,8 +353,9 @@ int main(void)
   // CommandSubcommands(RESET_PASSQ);
   //CommandSubcommands(ALL_FETS_ON);
   data_ready_semaphore = xSemaphoreCreateBinary();
+  data_ready_semaphore = xSemaphoreCreateBinary();
 
-  status = xTaskCreate(modbus_comm_task, "modbus_comm_task", 200, NULL, 1, &modbus_task_handle);
+  status = xTaskCreate(modbus_comm_task, "modbus_comm_task", 200, NULL, 2, &modbus_task_handle);
   configASSERT(status == pdPASS);
 
   status = xTaskCreate(soc_task, "soc_handle", 200, NULL, 3, &soc_task_handle);
@@ -666,7 +678,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-static void modbus_comm_task(void *parameters)
+void modbus_comm_task(void *parameters)
 {
   bool start_modbus = false;
 
@@ -693,7 +705,7 @@ static void modbus_comm_task(void *parameters)
   {
     HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
     printf("\r\nInitializing server socket\r\n");
-    vTaskDelay(pdMS_TO_TICKS(100));
+    vTaskDelay(pdMS_TO_TICKS(500));
 
     // Parameters in order: socket_id, protocol TCP or UDP, Port number, Flags=0
     // Return value is socket ID on success
@@ -701,7 +713,7 @@ static void modbus_comm_task(void *parameters)
     {
       // Error
       printf("Cannot create Socket!\r\n");
-      vTaskDelay(pdMS_TO_TICKS(200)); // Delay before retrying
+      vTaskDelay(pdMS_TO_TICKS(500)); // Delay before retrying
       continue;                       // Retry initialization
     }
 
@@ -769,6 +781,7 @@ static void modbus_comm_task(void *parameters)
         	modbus_receive(RX_buffer, TX_buffer, len, holding_register);
         }
 
+        vTaskDelay(pdMS_TO_TICKS(500));
 
         printf("\r\nECHO sent back to client\r\n");
 
@@ -782,7 +795,7 @@ static void modbus_comm_task(void *parameters)
           break;         // Exit client communication loop
         }
 
-        vTaskDelay(pdMS_TO_TICKS(100)); // Allow other tasks to run
+        vTaskDelay(pdMS_TO_TICKS(500)); // Allow other tasks to run
       } // While loop (as long as client is connected)
     } // If block, client connect success
   } // Outer while loop
@@ -801,10 +814,13 @@ static void soc_task(void *parameters)
 
   while (start_soc)
   {
+	soc_ready = false;
     PRINT_STR("TASK2 WHILE LOOP\r\n");
     uint16_t soc = soc_k_update_get(coulumbs);
     holding_register[21] = soc;
+    holding_register[22] = coulumbs;
     BQ769x2_ReadPassQ();
+    //xSemaphoreGive(soc_ready_semaphore);
     HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
     vTaskDelay(pdMS_TO_TICKS(100));
     // HAL_Delay(500);
@@ -821,9 +837,8 @@ static void bms_state_machine_task(void *parameters)
   while (1)
   {
     bms_state_machine(&bms1);
-    BQ769x2_ReadSafetyStatus();
     uint16_t current = BQ769x2_ReadCurrent();
-    vTaskDelay(pdMS_TO_TICKS(200));
+    vTaskDelay(pdMS_TO_TICKS(100));
     // taskYIELD();
   }
 }
@@ -831,6 +846,7 @@ static void bms_state_machine_task(void *parameters)
 static void read_voltage_task(void *parameters)
 {
 
+	uint16_t counter = 0;
   while (1)
   {
 
@@ -842,48 +858,53 @@ static void read_voltage_task(void *parameters)
     // uint16_t alarm;
     // alarm = BQ769x2_ReadAlarmStatus();
     AlarmBits = BQ769x2_ReadAlarmStatus();
-    if (AlarmBits & 0x80)
-    { // Check if FULLSCAN is complete. If set, new measurements are available
-      BQ769x2_ReadAllVoltages(&bms1);
-      // float coulombs = BQ769x2_ReadPassQ();
-      Pack_Current = BQ769x2_ReadCurrent();
-      Temperature[0] = BQ769x2_ReadTemperature(TS1Temperature);
-      Temperature[1] = BQ769x2_ReadTemperature(TS3Temperature);
+        if (AlarmBits & 0x80)
+        { // Check if FULLSCAN is complete. If set, new measurements are available
+          counter += 1;
+        	BQ769x2_ReadAllVoltages(&bms1);
+          // float coulombs = BQ769x2_ReadPassQ();
+          Pack_Current = BQ769x2_ReadCurrent();
+          Temperature[0] = BQ769x2_ReadTemperature(TS1Temperature);
+          Temperature[1] = BQ769x2_ReadTemperature(TS3Temperature);
 
-      holding_register[0] = voltage_to_percentage(CellVoltage[0]);
-      holding_register[1] = voltage_to_percentage(CellVoltage[1]);
-      holding_register[2] = voltage_to_percentage(CellVoltage[2]);
-      holding_register[3] = voltage_to_percentage(CellVoltage[3]);
-      holding_register[4] = voltage_to_percentage(CellVoltage[4]);
-      holding_register[5] = voltage_to_percentage(CellVoltage[5]);
-      holding_register[6] = voltage_to_percentage(CellVoltage[6]);
-      holding_register[7] = voltage_to_percentage(CellVoltage[7]);
-      holding_register[8] = voltage_to_percentage(CellVoltage[15]);
+          holding_register[0] = voltage_to_percentage(CellVoltage[0]);
+          holding_register[1] = voltage_to_percentage(CellVoltage[1]);
+          holding_register[2] = voltage_to_percentage(CellVoltage[2]);
+          holding_register[3] = voltage_to_percentage(CellVoltage[3]);
+          holding_register[4] = voltage_to_percentage(CellVoltage[4]);
+          holding_register[5] = voltage_to_percentage(CellVoltage[5]);
+          holding_register[6] = voltage_to_percentage(CellVoltage[6]);
+          holding_register[7] = voltage_to_percentage(CellVoltage[7]);
+          holding_register[8] = voltage_to_percentage(CellVoltage[15]);
 
 
 
-      holding_register[9] = (CellVoltage[0]);
-      holding_register[10] = (CellVoltage[1]);
-      holding_register[11] = (CellVoltage[2]);
-      holding_register[12] = (CellVoltage[3]);
-      holding_register[13] = (CellVoltage[4]);
-      holding_register[14] = (CellVoltage[5]);
-      holding_register[15] = (CellVoltage[6]);
-      holding_register[16] = (CellVoltage[7]);
-      holding_register[17] = (CellVoltage[15]);
+          holding_register[9] = (CellVoltage[0]);
+          holding_register[10] = (CellVoltage[1]);
+          holding_register[11] = (CellVoltage[2]);
+          holding_register[12] = (CellVoltage[3]);
+          holding_register[13] = (CellVoltage[4]);
+          holding_register[14] = (CellVoltage[5]);
+          holding_register[15] = (CellVoltage[6]);
+          holding_register[16] = (CellVoltage[7]);
+          holding_register[17] = (CellVoltage[15]);
 
-      holding_register[18] = stackVoltage;
-      holding_register[19] = BQ769x2_ReadCurrent();
-      uint16_t current = BQ769x2_ReadCurrent();
-      holding_register[20] = BQ769x2_ReadVoltage(PACKPinVoltage, &bms1);
+          holding_register[18] = stackVoltage;
+          holding_register[19] = BQ769x2_ReadCurrent();
+          uint16_t current = BQ769x2_ReadCurrent();
+          holding_register[20] = BQ769x2_ReadVoltage(PACKPinVoltage, &bms1);
 
-      DirectCommands(AlarmStatus, 0x0080, W); // Clear the FULLSCAN bit
-                                              //	  			HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
+          DirectCommands(AlarmStatus, 0x0080, W); // Clear the FULLSCAN bit
+                                                  //	  			HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
 
-      //	  				  HAL_Delay(100);
-      xSemaphoreGive(data_ready_semaphore);
-    }
-    vTaskDelay(pdMS_TO_TICKS(500));
+          //	  				  HAL_Delay(100);
+
+          if(counter > 2){
+        	  xSemaphoreGive(data_ready_semaphore);
+          }
+
+        }
+    vTaskDelay(pdMS_TO_TICKS(1000));
   }
 }
 void HAL_SYSTICK_Callback()

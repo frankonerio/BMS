@@ -25,7 +25,7 @@
 ../Core/Src/main.c:670:7:BQ769x2_ReadTemperature	16	static
 ../Core/Src/main.c:677:7:BQ769x2_ReadPassQ	16	static
 ../Core/Src/main.c:705:9:EEPROM_ReadByte	40	static
-../Core/Src/main.c:738:5:main	24	static
+../Core/Src/main.c:738:5:main	72	static
 ../Core/Src/main.c:1008:6:SystemClock_Config	88	static
 ../Core/Src/main.c:1056:13:MX_I2C1_Init	8	static
 ../Core/Src/main.c:1090:13:MX_TIM10_Init	8	static

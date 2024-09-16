@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <math.h>
+#include <stdbool.h>
 #include "look_up_table.h"
 
 #define NUM_CELLS 16 // Define the number of cells
@@ -35,7 +36,7 @@ typedef struct {
 void get_min_max_vcell(void);
 void get_initial_soc(void);
 uint8_t voltage_to_percentage(uint16_t voltage);
-uint16_t soc_k_update_get(int16_t coulombs_count);
+uint16_t soc_k_update_get(float coulombs_count);
 
 // Global variables declarations
 extern uint16_t CellVoltage[16];

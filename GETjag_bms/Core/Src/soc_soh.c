@@ -1,8 +1,10 @@
 #include "soc_soh.h"
 
-uint16_t min_vcell, max_vcell; // Global variables for min and max values
-float initial_soc = -1;        // Default soc for new battery(cell) pack
+uint16_t min_vcell, max_vcell; // Global variables for min and max values       // Default soc for new battery(cell) pack
+float initial_soc = -1;
 uint16_t pack_current;
+bool count_init = true;
+float difference, difference, previous_count;
 
 // Function definition for get_initial_soc
 void get_initial_soc(void)
@@ -18,7 +20,7 @@ void get_initial_soc(void)
     if (initial_soc < 0)
     {
         // Calculate LUT value based on min voltage
-        uint16_t lut_value = get_val_lookup_table(g_ocv_q_released_mah_table, 15, (uint16_t)round(min_vcell));
+        uint16_t lut_value = get_val_lookup_table(g_ocv_q_released_mah_table, NUM_CELLS, (uint16_t)round(min_vcell));
         //printf("Debug: LUT Value from Lookup Table: %u\n", lut_value);
 
         if (lut_value < CELL_NOMINAL_CAPACITY_MAH)
@@ -57,33 +59,76 @@ void get_initial_soc(void)
     //printf("Updated: dod before calculated as: %.2f%%\n", soc_coulomb_count_init.dod);
 }
 
-uint16_t soc_k_update_get(int16_t coulombs_count)
+uint16_t soc_k_update_get(float coulombs_count)
 {
 
-    // Calculate the delta DOD based on the given coulombs_count and the rated capacity
-    soc_coulomb_count_init.delta_dod = (float)coulombs_count / (float)soc_coulomb_count_init.Q_rated * 100.0f;
-    // Update SOC based on the coulombs_count
-    if (coulombs_count > 0)
-    {
-        // Positive coulombs_count indicates charging, which increases SOC
-        soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.charge_efficiency * soc_coulomb_count_init.delta_dod;
-        soc_coulomb_count_init.dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
-    }
-    else
-    {
-        // Negative coulombs_count indicates discharging, which decreases SOC
-        soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
-        soc_coulomb_count_init.dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
-    }
+//    // Calculate the delta DOD based on the given coulombs_count and the rated capacity
+//    soc_coulomb_count_init.delta_dod = (float)coulombs_count / (float)soc_coulomb_count_init.Q_rated * 100.0f;
+//    // Update SOC based on the coulombs_count
+//    if (coulombs_count > 0)
+//    {
+//        // Positive coulombs_count indicates charging, which increases SOC
+//        soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.charge_efficiency * soc_coulomb_count_init.delta_dod;
+//        soc_coulomb_count_init.dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+//    }
+//    else
+//    {
+//        // Negative coulombs_count indicates discharging, which decreases SOC
+//        soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+//        soc_coulomb_count_init.dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+//    }
+//
+//    // Calculate the updated SOC
+//    soc_coulomb_count_init.soc = soc_coulomb_count_init.soh - soc_coulomb_count_init.cummulative_dod;
+//    soc_coulomb_count_init.soc = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.soc));
+//    soc_coulomb_count_init.dod = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.dod));
+//    //printf("Updated: SOC calculated as: %.2f%%\n", soc_coulomb_count_init.soc);
+//    //printf("Updated: dod calculated as: %.2f%%\n", soc_coulomb_count_init.dod);
+//
+//    return (uint16_t)soc_coulomb_count_init.soc; // Return the updated SOC as an integer
 
-    // Calculate the updated SOC
-    soc_coulomb_count_init.soc = soc_coulomb_count_init.soh - soc_coulomb_count_init.cummulative_dod;
-    soc_coulomb_count_init.soc = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.soc));
-    soc_coulomb_count_init.dod = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.dod));
-    //printf("Updated: SOC calculated as: %.2f%%\n", soc_coulomb_count_init.soc);
-    //printf("Updated: dod calculated as: %.2f%%\n", soc_coulomb_count_init.dod);
 
-    return (uint16_t)soc_coulomb_count_init.soc; // Return the updated SOC as an integer
+	// Calculate the delta DOD based on the given coulombs_count and the rated capacity
+	if (count_init) {
+	        // For the first reading, return it itself as the difference
+	        previous_count = coulombs_count;
+	        count_init = false;
+	        difference = coulombs_count;
+	    } else {
+	        // Calculate the difference for consecutive readings
+	        difference = coulombs_count - previous_count;
+
+	        // Update the previous count for next calculations
+	        previous_count = coulombs_count;
+	    }
+
+	    //printf("Updated: difference calculated as: %.2f\n",  difference);
+
+	    // Calculate the delta DOD based on the given coulombs_count and the rated capacity
+	    soc_coulomb_count_init.delta_dod = (-1.0f) * (float)difference / (float)soc_coulomb_count_init.Q_rated * 100.0f;
+	    soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod + soc_coulomb_count_init.charge_efficiency * soc_coulomb_count_init.delta_dod;
+	    // Update SOC based on the coulombs_count
+	    if (difference > 0)
+	    {
+	        // Positive coulombs_count indicates charging, which increases SOC
+
+	        soc_coulomb_count_init.dod += soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+	    }
+	    else
+	    {
+	        // Negative coulombs_count indicates discharging, which decreases SOC
+	        //soc_coulomb_count_init.cummulative_dod = soc_coulomb_count_init.dod - soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+	        soc_coulomb_count_init.dod += soc_coulomb_count_init.discharge_efficiency * soc_coulomb_count_init.delta_dod;
+	    }
+
+	    // Calculate the updated SOC
+	    soc_coulomb_count_init.soc = soc_coulomb_count_init.soh - soc_coulomb_count_init.dod;
+	    soc_coulomb_count_init.soc = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.soc));
+	    soc_coulomb_count_init.dod = fmax(0.0f, fminf(100.0f, soc_coulomb_count_init.dod));
+	    //printf("Updated: SOC calculated as: %.2f%%\n", soc_coulomb_count_init.soc);
+	    //printf("Updated: dod calculated as: %.2f%%\n", soc_coulomb_count_init.dod);
+
+	    return (uint16_t)soc_coulomb_count_init.soc; // Return the updated SOC as an integer
 }
 
 void soc_full_correct(void)

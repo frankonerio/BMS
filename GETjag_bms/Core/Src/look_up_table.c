@@ -4,10 +4,29 @@
 
 
 // Define the array using the struct
+//const VoltageCapacityPair g_ocv_q_released_mah_table[] = {
+//    {3000U, 4800U}, // Adjusted: Set full charge capacity at 5000 mV
+//    {2837U, 4600U}, // Example reduction based on voltage increase
+//    {2911U, 4550U},
+//    {2992U, 4500U},
+//    {3150U, 4400U},
+//    {3219U, 4300U},
+//    {3347U, 4200U},
+//    {3414U, 4100U},
+//    {3505U, 3800U},
+//    {3604U, 3000U},
+//    {3706U, 2000U},
+//    {3812U, 1200U},
+//    {3915U, 600U},
+//    {4004U, 300U},
+//    {4101U, 100U},
+//    {4300U, 0U} // Adjusted: Last pair set to 0 capacity at full charge voltage
+//};
+
 const VoltageCapacityPair g_ocv_q_released_mah_table[] = {
     {3000U, 4800U}, // Adjusted: Set full charge capacity at 5000 mV
     {2837U, 4600U}, // Example reduction based on voltage increase
-    {2911U, 4550U}, 
+    {2911U, 4550U},
     {2992U, 4500U},
     {3150U, 4400U},
     {3219U, 4300U},
@@ -22,7 +41,6 @@ const VoltageCapacityPair g_ocv_q_released_mah_table[] = {
     {4101U, 100U},
     {4300U, 0U} // Adjusted: Last pair set to 0 capacity at full charge voltage
 };
-
 // Define NUM_PAIRS based on the size of the array
 const size_t NUM_PAIRS = sizeof(g_ocv_q_released_mah_table) / sizeof(g_ocv_q_released_mah_table[0]);
 

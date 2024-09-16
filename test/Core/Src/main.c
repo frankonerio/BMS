@@ -505,13 +505,13 @@ void BQ769x2_Init() {
 
 	  // Set up COV (over-voltage) Threshold - 0x9278 = 0x55 (4301 mV)
 	  // COV Threshold is this value multiplied by 50.6mV
-	  BQ769x2_SetRegister(COVThreshold, 0x60, 1);
+	  BQ769x2_SetRegister(COVThreshold, 0x55, 1);
 
 	  // Set up OCC (over-current in charge) Threshold - 0x9280 = 0x05 (10 mV = 10A across 1mOhm sense resistor) Units in 2mV
 	  BQ769x2_SetRegister(OCCThreshold, 0x05, 1);
 
 	  // Set up OCD1 Threshold - 0x9282 = 0x0A (20 mV = 20A across 1mOhm sense resistor) units of 2mV
-	  BQ769x2_SetRegister(OCD1Threshold, 0x03, 1);
+	  BQ769x2_SetRegister(OCD1Threshold, 0x0A, 1);
 
 	  // Set up SCD Threshold - 0x9286 = 0x05 (100 mV = 100A across 1mOhm sense resistor)  0x05=100mV
 	  BQ769x2_SetRegister(SCDThreshold, 0x01, 1);
@@ -531,14 +531,14 @@ void BQ769x2_Init() {
 
 
 
-	  BQ769x2_SetRegister(BalancingConfiguration, 0x03, 1);
+	  //BQ769x2_SetRegister(BalancingConfiguration, 0x03, 1);
 
-	  BQ769x2_SetRegister(CellBalanceMaxCells, 0x02, 1);
+	  //BQ769x2_SetRegister(CellBalanceMaxCells, 0x02, 1);
 
 	  //BQ769x2_SetRegister(CellBalanceInterval, (uint8_t)(200), 1);
-	  BQ769x2_SetRegister(DAConfiguration, 0x05, 1); //set user Amps to 1mA
+	  //BQ769x2_SetRegister(DAConfiguration, 0x05, 1); //set user Amps to 1mA
 
-	  BQ769x2_SetRegister(PredischargeStopDelta, 0x64, 1); //set pre-discharge delta to 2500mV
+	  //BQ769x2_SetRegister(PredischargeStopDelta, 0x64, 1); //set pre-discharge delta to 2500mV
 
 	  //BQ769x2_SetRegister(PredischargeTimeout , 0x64, 1); //set pre-discharge delta to 2500mV
 
@@ -785,7 +785,7 @@ int main(void)
   	BQ769x2_Init();  // Configure all of the BQ769x2 register settings
   	delayUS(12000);
   	CommandSubcommands(RESET_PASSQ);
-  	CommandSubcommands(DSG_PDSG_OFF);
+  	//CommandSubcommands(DSG_PDSG_OFF);
   	alarm = BQ769x2_ReadAlarmStatus();
   	 DirectCommands(SafetyStatusA, 0x00, R);
   		  DirectCommands(SafetyStatusB, 0x00, R);
@@ -864,15 +864,15 @@ int main(void)
 
   	BQ769x2_ReadAllVoltages();
 
-  	while(1){
+  	//while(1){
 
-  		if(LD_Voltage > 4){
+  		//if(LD_Voltage > 4){
   		  		CommandSubcommands(ALL_FETS_ON);
-  		  	BQ769x2_ReadAllVoltages();
-  		  	};
-  	};
+  		  	//BQ769x2_ReadAllVoltages();
+  		  	//};
+  	//};
 
-	get_initial_soc();
+	//get_initial_soc();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -934,7 +934,7 @@ int main(void)
 //	  	CommandSubcommands(ALERT_LO);
 //	  		status1 = RX_data[0];
 //	  		status2 = RX_data[1];
-
+		  	BQ769x2_ReadSafetyStatus();
 		AlarmBits = BQ769x2_ReadAlarmStatus();
 		GPIO_PinState buttonState = HAL_GPIO_ReadPin(ALERT_PIN_2_GPIO_Port,ALERT_PIN_2_Pin);
 		if (AlarmBits & 0x80) {  // Check if FULLSCAN is complete. If set, new measurements are available

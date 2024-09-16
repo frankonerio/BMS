@@ -447,10 +447,10 @@ void BQ769x2_Init()
   BQ769x2_SetRegister(COVThreshold, 0x55, 1);
 
   // Set up OCC (over-current in charge) Threshold - 0x9280 = 0x05 (10 mV = 10A across 1mOhm sense resistor) Units in 2mV
-  BQ769x2_SetRegister(OCCThreshold, 0x02, 1);
+  BQ769x2_SetRegister(OCCThreshold, 0x05, 1);
 
   // Set up OCD1 Threshold - 0x9282 = 0x0A (20 mV = 20A across 1mOhm sense resistor) units of 2mV
-  BQ769x2_SetRegister(OCD1Threshold, 0x03, 1);
+  BQ769x2_SetRegister(OCD1Threshold, 0x0A, 1);
 
   // Set up SCD Threshold - 0x9286 = 0x05 (100 mV = 100A across 1mOhm sense resistor)  0x05=100mV
   BQ769x2_SetRegister(SCDThreshold, 0x01, 1);
@@ -638,7 +638,7 @@ float BQ769x2_ReadPassQ(){ // Read Accumulated Charge and Time from DASTATUS6
 
 	    //charge = 0xFFFFFFFF - AccumulatedCharge_Int;
 	    float totalAccumulatedCharge_mAh = (float)AccumulatedCharge_Int + ((float)AccumulatedCharge_Frac / FRAC_DIVISOR);
-	    float totalAccumulatedCharge_Ah = totalAccumulatedCharge_mAh / 1000.0f;
+	    //float totalAccumulatedCharge_Ah = totalAccumulatedCharge_mAh / 1000.0f;
 
 	    coulumbs = totalAccumulatedCharge_mAh;
 	    return coulumbs;
@@ -687,6 +687,7 @@ bool bms_discharge_allowed(bms_context *bms)
 
 void bms_state_machine(bms_context *bms)
 {
+	BQ769x2_ReadSafetyStatus();
   switch (bms->bms_state)
   {
   case BMS_STATE_OFF:
