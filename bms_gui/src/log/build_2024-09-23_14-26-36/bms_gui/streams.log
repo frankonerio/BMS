@@ -1,0 +1,33 @@
+[0.032s] Invoking command in '/home/frank/thesis_ws/bms_gui/src/build/bms_gui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/src/build/bms_gui -- -j16 -l16
+[0.062s] [ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[2.242s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[2.242s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:55:38:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Ktimeval*[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.242s]    55 |     modbus_set_response_timeout(ctx, [01;31m[K&response_timeout[m[K);
+[2.242s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.242s]       |                                      [01;31m[K|[m[K
+[2.242s]       |                                      [01;31m[Ktimeval*[m[K
+[2.243s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:55:32:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint modbus_set_response_timeout(modbus_t*, uint32_t, uint32_t)[m[K’
+[2.243s]    55 |     [01;31m[Kmodbus_set_response_timeout(ctx, &response_timeout)[m[K;
+[2.243s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.243s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23[m[K,
+[2.243s]                  from [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1[m[K:
+[2.243s] [01m[K/usr/local/include/modbus/modbus.h:197:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.243s]   197 | [01;36m[Kmodbus_set_response_timeout[m[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);
+[2.243s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.243s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:60:34:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Ktimeval*[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.243s]    60 |     modbus_set_byte_timeout(ctx, [01;31m[K&connection_timeout[m[K);
+[2.243s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.243s]       |                                  [01;31m[K|[m[K
+[2.243s]       |                                  [01;31m[Ktimeval*[m[K
+[2.243s] [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:60:28:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint modbus_set_byte_timeout(modbus_t*, uint32_t, uint32_t)[m[K’
+[2.243s]    60 |     [01;31m[Kmodbus_set_byte_timeout(ctx, &connection_timeout)[m[K;
+[2.243s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.243s] In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23[m[K,
+[2.243s]                  from [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1[m[K:
+[2.243s] [01m[K/usr/local/include/modbus/modbus.h:201:16:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.243s]   201 | MODBUS_API int [01;36m[Kmodbus_set_byte_timeout[m[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);
+[2.243s]       |                [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.889s] gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+[2.889s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+[2.889s] gmake: *** [Makefile:146: all] Error 2
+[2.890s] Invoked command in '/home/frank/thesis_ws/bms_gui/src/build/bms_gui' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/frank/thesis_ws/bms_gui/src/build/bms_gui -- -j16 -l16

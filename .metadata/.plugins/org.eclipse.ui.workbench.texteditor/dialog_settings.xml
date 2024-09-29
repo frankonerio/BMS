@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="data_ready_semaphore"/>
+		<item key="selection" value=" Subcommands"/>
 		<list key="findhistory">
+			<item value=" Subcommands"/>
+			<item value="BQ769x2_ReadCurrent()"/>
+			<item value="pack_current"/>
+			<item value="CB_ACTIVE_CELLS"/>
 			<item value="data_ready_semaphore"/>
 			<item value="modbus_ready_semaphore"/>
 			<item value="readpass"/>
@@ -19,10 +23,6 @@
 			<item value="charge"/>
 			<item value="coulomb"/>
 			<item value="DA"/>
-			<item value="0x0085"/>
-			<item value="safety"/>
-			<item value="AlarmBits"/>
-			<item value="alarm"/>
 		</list>
 		<list key="replacehistory">
 			<item value="data_ready_semaphore"/>

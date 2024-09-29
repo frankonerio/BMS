@@ -1,4 +1,6 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/soc.h \
+ ../Core/Inc/look_up_table.h ../Core/Inc/BQ769x2Header.h \
+ ../Core/Inc/bq_common.h ../Core/Inc/main.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -30,7 +32,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/modbus.h \
+ ../Core/Inc/main.h ../Core/Inc/spi.h ../Core/Inc/modbus.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/socket.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h \
  /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500/w5500.h \
@@ -52,11 +54,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/list.h \
  ../Core/Inc/BQ769x2Header.h ../Core/Inc/utils.h ../Core/Inc/bq_common.h \
- ../Core/Inc/BQ769x2Header.h ../Core/Inc/soc_soh.h \
- ../Core/Inc/look_up_table.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/semphr.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/queue.h \
  /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h
+../Core/Inc/soc.h:
+../Core/Inc/look_up_table.h:
+../Core/Inc/BQ769x2Header.h:
+../Core/Inc/bq_common.h:
 ../Core/Inc/main.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -89,8 +93,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 /home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-../Core/Inc/spi.h:
 ../Core/Inc/main.h:
+../Core/Inc/spi.h:
 ../Core/Inc/modbus.h:
 /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/socket.h:
 /home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/wizchip_conf.h:
@@ -115,9 +119,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/BQ769x2Header.h:
 ../Core/Inc/utils.h:
 ../Core/Inc/bq_common.h:
-../Core/Inc/BQ769x2Header.h:
-../Core/Inc/soc_soh.h:
-../Core/Inc/look_up_table.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/semphr.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/queue.h:
 /home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include/task.h:

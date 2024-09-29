@@ -1,56 +1,7 @@
-14:10:33 **** Incremental Build of configuration Debug for project GETjag_bms ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/Config" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/OS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/SEGGER/SEGGER" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/include" -I"/home/frank/thesis_ws/GETjag_bms/Middleware/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500" -I"/home/frank/thesis_ws/GETjag_bms/Core/Src/w5500/W5500" -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/frank/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:350:12: warning: unused variable 'FET_options' [-Wunused-variable]
-  350 |   uint16_t FET_options = BQ769x2_ReadRegister(FETOptions);
-      |            ^~~~~~~~~~~
-../Core/Src/main.c:349:12: warning: unused variable 'manuData' [-Wunused-variable]
-  349 |   uint16_t manuData = BQ769x2_ReadRegister(MANU_DATA);
-      |            ^~~~~~~~
-../Core/Src/main.c:348:12: warning: unused variable 'manuInit' [-Wunused-variable]
-  348 |   uint16_t manuInit = BQ769x2_ReadRegister(MfgStatusInit);
-      |            ^~~~~~~~
-../Core/Src/main.c:347:12: warning: unused variable 'manuStatus' [-Wunused-variable]
-  347 |   uint16_t manuStatus = BQ769x2_ReadRegister(MANUFACTURINGSTATUS);
-      |            ^~~~~~~~~~
-../Core/Src/main.c: In function 'bms_state_machine_task':
-../Core/Src/main.c:840:14: warning: unused variable 'current' [-Wunused-variable]
-  840 |     uint16_t current = BQ769x2_ReadCurrent();
-      |              ^~~~~~~
-../Core/Src/main.c: In function 'read_voltage_task':
-../Core/Src/main.c:894:20: warning: unused variable 'current' [-Wunused-variable]
-  894 |           uint16_t current = BQ769x2_ReadCurrent();
-      |                    ^~~~~~~
-arm-none-eabi-gcc -o "GETjag_bms.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/frank/thesis_ws/GETjag_bms/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GETjag_bms.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-/home/frank/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: GETjag_bms.elf has a LOAD segment with RWX permissions
-Finished building target: GETjag_bms.elf
- 
-arm-none-eabi-size  GETjag_bms.elf 
-arm-none-eabi-objdump -h -S GETjag_bms.elf  > "GETjag_bms.list"
-arm-none-eabi-objcopy  -O ihex GETjag_bms.elf  "GETjag_bms.hex"
-arm-none-eabi-objcopy  -O binary GETjag_bms.elf  "GETjag_bms.bin"
-   text	   data	    bss	    dec	    hex	filename
-  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
-Finished building: default.size.stdout
- 
-Finished building: GETjag_bms.hex
-Finished building: GETjag_bms.bin
- 
- 
-Finished building: GETjag_bms.list
- 
-14:10:44 **** Incremental Build of configuration Debug for project GETjag_bms ****
+13:01:36 **** Incremental Build of configuration Debug for project GETjag_bms ****
 make -j16 all 
 arm-none-eabi-size  GETjag_bms.elf 
    text	   data	    bss	    dec	    hex	filename
-  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
-Finished building: default.size.stdout
- 
-14:10:45 **** Incremental Build of configuration Debug for project GETjag_bms ****
-make -j16 all 
-arm-none-eabi-size  GETjag_bms.elf 
-   text	   data	    bss	    dec	    hex	filename
-  61408	    204	  86172	 147784	  24148	GETjag_bms.elf
+  66204	    224	  86160	 152588	  2540c	GETjag_bms.elf
 Finished building: default.size.stdout
  

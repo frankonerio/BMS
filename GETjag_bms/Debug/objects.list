@@ -3,7 +3,7 @@
 "./Core/Src/look_up_table.o"
 "./Core/Src/main.o"
 "./Core/Src/modbus.o"
-"./Core/Src/soc_soh.o"
+"./Core/Src/soc.o"
 "./Core/Src/stm32f4xx_hal_msp.o"
 "./Core/Src/stm32f4xx_hal_timebase_tim.o"
 "./Core/Src/stm32f4xx_it.o"

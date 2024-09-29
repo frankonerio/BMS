@@ -1,0 +1,71 @@
+[0.000000] (-) TimerEvent: {}
+[0.000266] (bms_gui) JobQueued: {'identifier': 'bms_gui', 'dependencies': OrderedDict()}
+[0.000285] (bms_gui) JobStarted: {'identifier': 'bms_gui'}
+[0.028331] (bms_gui) JobProgress: {'identifier': 'bms_gui', 'progress': 'cmake'}
+[0.029067] (bms_gui) JobProgress: {'identifier': 'bms_gui', 'progress': 'build'}
+[0.029184] (bms_gui) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/frank/thesis_ws/bms_gui/src/build/bms_gui', '--', '-j16', '-l16'], 'cwd': '/home/frank/thesis_ws/bms_gui/src/build/bms_gui', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'frank'), ('LC_TIME', 'en_NG.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/frank/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/frank'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_NG.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2435'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd59164d4ced1ccafb19720966f10afb'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'frank'), ('_', '/home/frank/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('XILINX_VIVADO', '/opt/Xilinx/Vivado/Vivado/2020.1'), ('USERNAME', 'frank'), ('STM32_PRG_PATH', '/home/frank/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/Xilinx/Vivado/Vivado/2020.1/bin:/opt/Xilinx/Vivado/DocNav:/opt/ros/humble/bin:/home/frank/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/frank:@/tmp/.ICE-unix/2435,unix/frank:/tmp/.ICE-unix/2435'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_NG.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5fc21f9e_ed12_4380_b15e_9db22aa53973'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_NG.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.196'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_NG.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_NG.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_NG.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/frank/thesis_ws/bms_gui/src/build/bms_gui'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bd59164d4ced1ccafb19720966f10afb'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_NG.UTF-8'), ('LC_PAPER', 'en_NG.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.059711] (bms_gui) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o\x1b[0m\n'}
+[0.099910] (-) TimerEvent: {}
+[0.200138] (-) TimerEvent: {}
+[0.300465] (-) TimerEvent: {}
+[0.400738] (-) TimerEvent: {}
+[0.501002] (-) TimerEvent: {}
+[0.601253] (-) TimerEvent: {}
+[0.701514] (-) TimerEvent: {}
+[0.801858] (-) TimerEvent: {}
+[0.902134] (-) TimerEvent: {}
+[1.002456] (-) TimerEvent: {}
+[1.102804] (-) TimerEvent: {}
+[1.203136] (-) TimerEvent: {}
+[1.303463] (-) TimerEvent: {}
+[1.403801] (-) TimerEvent: {}
+[1.504154] (-) TimerEvent: {}
+[1.604483] (-) TimerEvent: {}
+[1.704822] (-) TimerEvent: {}
+[1.805158] (-) TimerEvent: {}
+[1.905496] (-) TimerEvent: {}
+[2.005856] (-) TimerEvent: {}
+[2.101165] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRos2Comm::Ros2Comm()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.101338] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:34:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Ktimeval*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kuint32_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.101386] (bms_gui) StderrLine: {'line': b'   34 |     modbus_set_response_timeout(ctx, \x1b[01;31m\x1b[K&response_timeout\x1b[m\x1b[K);\n'}
+[2.101422] (bms_gui) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.101454] (bms_gui) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[2.101485] (bms_gui) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[Ktimeval*\x1b[m\x1b[K\n'}
+[2.101516] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:34:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktoo few arguments to function \xe2\x80\x98\x1b[01m\x1b[Kint modbus_set_response_timeout(modbus_t*, uint32_t, uint32_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.101549] (bms_gui) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Kmodbus_set_response_timeout(ctx, &response_timeout)\x1b[m\x1b[K;\n'}
+[2.101579] (bms_gui) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.101611] (bms_gui) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23\x1b[m\x1b[K,\n'}
+[2.101642] (bms_gui) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1\x1b[m\x1b[K:\n'}
+[2.101673] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/modbus/modbus.h:197:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[2.101816] (bms_gui) StderrLine: {'line': b'  197 | \x1b[01;36m\x1b[Kmodbus_set_response_timeout\x1b[m\x1b[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);\n'}
+[2.101859] (bms_gui) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.101892] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:39:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Ktimeval*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kuint32_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.101925] (bms_gui) StderrLine: {'line': b'   39 |     modbus_set_byte_timeout(ctx, \x1b[01;31m\x1b[K&byte_timeout\x1b[m\x1b[K);\n'}
+[2.101955] (bms_gui) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.101984] (bms_gui) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[2.102013] (bms_gui) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[Ktimeval*\x1b[m\x1b[K\n'}
+[2.102042] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:39:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktoo few arguments to function \xe2\x80\x98\x1b[01m\x1b[Kint modbus_set_byte_timeout(modbus_t*, uint32_t, uint32_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.102072] (bms_gui) StderrLine: {'line': b'   39 |     \x1b[01;31m\x1b[Kmodbus_set_byte_timeout(ctx, &byte_timeout)\x1b[m\x1b[K;\n'}
+[2.102100] (bms_gui) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.102128] (bms_gui) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23\x1b[m\x1b[K,\n'}
+[2.102156] (bms_gui) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1\x1b[m\x1b[K:\n'}
+[2.102184] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/modbus/modbus.h:201:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[2.102213] (bms_gui) StderrLine: {'line': b'  201 | MODBUS_API int \x1b[01;36m\x1b[Kmodbus_set_byte_timeout\x1b[m\x1b[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);\n'}
+[2.102243] (bms_gui) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.102271] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:\x1b[m\x1b[K At global scope:\n'}
+[2.102301] (bms_gui) StderrLine: {'line': b'\x1b[01m\x1b[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:52:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kdefinition of implicitly-declared \xe2\x80\x98\x1b[01m\x1b[Kvirtual Ros2Comm::~Ros2Comm()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.102332] (bms_gui) StderrLine: {'line': b'   52 | Ros2Comm::~Ros2Comm(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[2.102360] (bms_gui) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.105913] (-) TimerEvent: {}
+[2.206168] (-) TimerEvent: {}
+[2.306490] (-) TimerEvent: {}
+[2.406817] (-) TimerEvent: {}
+[2.507188] (-) TimerEvent: {}
+[2.607541] (-) TimerEvent: {}
+[2.703447] (bms_gui) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1\n'}
+[2.703763] (bms_gui) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2\n'}
+[2.703835] (bms_gui) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.705111] (bms_gui) CommandEnded: {'returncode': 2}
+[2.707610] (-) TimerEvent: {}
+[2.762096] (bms_gui) JobEnded: {'identifier': 'bms_gui', 'rc': 2}
+[2.772448] (-) EventReactorShutdown: {}

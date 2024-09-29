@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;GETjag_bms/Core/Src/soc_soh.c&apos; to &apos;soc.c&apos;" description="Rename resource &apos;soc_soh.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/soc_soh.c" name="soc.c" stamp="1727103980270" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;GETjag_bms/Core/Inc/soc_soh.h&apos; to &apos;soc.h&apos;" description="Rename resource &apos;soc_soh.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/soc_soh.h" name="soc.h" stamp="1727103999673" updateReferences="true"/>
+</session>

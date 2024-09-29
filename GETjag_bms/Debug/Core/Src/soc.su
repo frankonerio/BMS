@@ -1,0 +1,7 @@
+../Core/Src/soc.c:10:6:get_initial_soc	24	static
+../Core/Src/soc.c:76:10:soc_k_update_get	16	static
+../Core/Src/soc.c:148:6:soc_full_correct	4	static
+../Core/Src/soc.c:163:6:soc_empty_correct	4	static
+../Core/Src/soc.c:179:6:get_min_max_vcell	16	static
+../Core/Src/soc.c:219:9:voltage_to_percentage	32	static
+../Core/Src/soc.c:245:8:soc_from_ocv	104	static

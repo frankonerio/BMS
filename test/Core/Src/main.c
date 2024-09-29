@@ -531,7 +531,7 @@ void BQ769x2_Init() {
 
 
 
-	  //BQ769x2_SetRegister(BalancingConfiguration, 0x03, 1);
+	  //BQ769x2_SetRegister(BalancingConfiguration, 0x10, 1);
 
 	  //BQ769x2_SetRegister(CellBalanceMaxCells, 0x02, 1);
 
@@ -543,6 +543,9 @@ void BQ769x2_Init() {
 	  //BQ769x2_SetRegister(PredischargeTimeout , 0x64, 1); //set pre-discharge delta to 2500mV
 
 	  // Exit CONFIGUPDATE mode  - Subcommand 0x0092
+
+	  //Subcommands(FET_CONTROL, 0x03, W);
+
 	  CommandSubcommands(EXIT_CFGUPDATE);
 
 }
@@ -836,11 +839,11 @@ int main(void)
 //
 //  	CommandSubcommands(DSGTEST);
 
-  	//Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
+  	//Subcommands(CB_ACTIVE_CELLS, 0x0016, W2);
   	//Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
-
-  	CommandSubcommands(PDSGTEST);
-  	CommandSubcommands(PCHGTEST);
+  	//alarm = BQ769x2_ReadAlarmStatus();
+  	//CommandSubcommands(PDSGTEST);
+  	//CommandSubcommands(PCHGTEST);
 
 ////
 ////	DirectCommands(FETStatus, 0x00, R);
@@ -867,7 +870,7 @@ int main(void)
   	//while(1){
 
   		//if(LD_Voltage > 4){
-  		  		CommandSubcommands(ALL_FETS_ON);
+  		  		//CommandSubcommands(ALL_FETS_ON);
   		  	//BQ769x2_ReadAllVoltages();
   		  	//};
   	//};
@@ -888,8 +891,9 @@ int main(void)
 	  DirectCommands(SafetyAlertA, 0x00, R);
 	  DirectCommands(SafetyAlertB, 0x00, R);
 	  DirectCommands(SafetyAlertC, 0x00, R);
-	 //Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
-	  //Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
+
+	 //Subcommands(CB_ACTIVE_CELLS, 0x4000, W2);
+	 //Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
 
 	  Subcommands(CBSTATUS1, 0x00, R);
 	  Subcommands(CBSTATUS2, 0x00, R);
@@ -944,8 +948,9 @@ int main(void)
     		Temperature[1] = BQ769x2_ReadTemperature(TS3Temperature);
 			DirectCommands(AlarmStatus, 0x0080, W);  // Clear the FULLSCAN bit
 			alarm = BQ769x2_ReadAlarmStatus();
-			//Subcommands(CB_ACTIVE_CELLS, 0x0001, W2);
-			//Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
+			//Subcommands(CB_ACTIVE_CELLS, 0x0004, W2);
+			//Subcommands(CB_ACTIVE_CELLS, 0x8000, W2);
+			Subcommands(CB_ACTIVE_CELLS, 0x0000, R);
 		}
 
 

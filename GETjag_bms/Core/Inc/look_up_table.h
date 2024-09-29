@@ -9,7 +9,7 @@
 #define FULL_I_MA                   (5.0f)
 #define VCELL_MAX_TH_MV             (4300.0f)
 #define VCELL_MIN_TH_MV             (3000.0f)
-#define CELL_NOMINAL_CAPACITY_MAH   (4800U)
+#define CELL_NOMINAL_CAPACITY_MAH   (5000U)
 
 
 typedef struct {

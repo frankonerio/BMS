@@ -1,5 +1,8 @@
-
 #include "bms_gui/ros2comm.h"
+#include <modbus/modbus.h>
+#include <cstdio>
+#include <unistd.h> // for sleep
+#include <cerrno>
 
 modbus_t *ctx;
 int rc_read = 0;
@@ -26,9 +29,10 @@ Ros2Comm::Ros2Comm()
 
     this->start();
 }
+
 void Ros2Comm::run()
 {
-    rclcpp::WallRate loop_rate(0.25);
+    rclcpp::WallRate loop_rate(2); // Adjusted polling rate to 1 second
     while (rclcpp::ok())
     {
         rclcpp::spin_some(node);
@@ -41,9 +45,14 @@ void Ros2Comm::run()
 
 int Ros2Comm::update_battery_state()
 {
+    // Create the Modbus TCP connection
+    ctx = modbus_new_tcp("192.168.137.14", 502);
 
-   ctx = modbus_new_tcp("192.168.137.14", 502);
+    // Set response and connection timeouts
+    modbus_set_response_timeout(ctx, 5, 0); // 5 seconds, 0 microseconds for response timeout
+    modbus_set_byte_timeout(ctx, 5, 0);     // 5 seconds, 0 microseconds for byte timeout
 
+    // Set the Modbus slave ID
     rc = modbus_set_slave(ctx, 0x01);
     if (rc == -1)
     {
@@ -52,62 +61,80 @@ int Ros2Comm::update_battery_state()
         return -1;
     }
 
-    // try connection
-    while (modbus_connect(ctx) == -1)
-    {
+    // Retry logic for connection
+    int retry_count = 0;
+    const int max_retries = 5;
 
+    while (modbus_connect(ctx) == -1 && retry_count < max_retries)
+    {
         fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
-    
+        retry_count++;
+        sleep(1); // Wait 1 second before retrying
     }
 
-    // printf("connection succeeded\n");
+    if (retry_count == max_retries)
+    {
+        fprintf(stderr, "Max retries reached. Connection failed.\n");
+        modbus_free(ctx);
+        return -1;
+    }
+
+    // Read registers if enabled
     if (read_registers == true)
     {
-
-        rc = modbus_read_registers(ctx, 0, 24, tab_dest);
-        if (rc == -1)
+        retry_count = 0;
+        while (retry_count < max_retries)
         {
-            fprintf(stderr, "%s\n", modbus_strerror(errno));
-            return -1;
+            rc = modbus_read_registers(ctx, 0, 24, tab_dest);
+            if (rc == -1)
+            {
+                fprintf(stderr, "Read failed: %s\n", modbus_strerror(errno));
+                retry_count++;
+                sleep(1); // Wait 1 second before retrying
+            }
+            else
+            {
+                break; // Break out of the loop if the read was successful
+            }
         }
 
-        for (i = 0; i < rc; i++)
+        if (retry_count == max_retries)
+        {
+            fprintf(stderr, "Max retries reached. Read operation failed.\n");
+            modbus_close(ctx);
+            modbus_free(ctx);
+            return -1;
+        }
+	 for (i = 0; i < rc; i++)
         {
             printf("reg[%d]=%d (0x%X)\n", i, tab_dest[i], tab_dest[i]);
             
         } 
 
+        // Process the registers
         cell1_voltage(tab_dest[0]);
         cell2_voltage(tab_dest[1]);
         cell3_voltage(tab_dest[2]);
         cell4_voltage(tab_dest[3]);
         cell5_voltage(tab_dest[4]);
-        cell6_voltage(tab_dest[8]); 
-        
-        lcd_soc(tab_dest[21]);
-        
-       
-        lcd_cell_1(tab_dest[9]);
-	lcd_cell_2(tab_dest[10]);
-	lcd_cell_3(tab_dest[11]);
-	lcd_cell_4(tab_dest[12]);
-	lcd_cell_5(tab_dest[13]);
-	lcd_cell_6(tab_dest[17]);
-	lcd_cell_7(tab_dest[14]);
-	lcd_cell_8(tab_dest[15]);
-	lcd_cell_9(tab_dest[16]);
-     }
+        cell6_voltage(tab_dest[8]);
 
-    else
-    {
-      
+        lcd_soc(tab_dest[21]);
+
+        lcd_cell_1(tab_dest[9]);
+        lcd_cell_2(tab_dest[10]);
+        lcd_cell_3(tab_dest[11]);
+        lcd_cell_4(tab_dest[12]);
+        lcd_cell_5(tab_dest[13]);
+        lcd_cell_6(tab_dest[17]);
+        lcd_cell_7(tab_dest[14]);
+        lcd_cell_8(tab_dest[15]);
+        lcd_cell_9(tab_dest[16]);
     }
 
-   /*  rc = modbus_write_registers(ctx, 0, 2, (uint16_t *)data);
-    data[0] = data[0] + 1;
-    data[1] = data[1] + 2; */
-
+    // Close and free the Modbus context
     modbus_close(ctx);
     modbus_free(ctx);
     return 0;
 }
+

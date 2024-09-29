@@ -1,0 +1,24 @@
+[ 11%] [32mBuilding CXX object CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o[0m
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In member function ‘[01m[Kint Ros2Comm::update_battery_state()[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:50:38:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Ktimeval*[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   50 |     modbus_set_response_timeout(ctx, [01;31m[K&response_timeout[m[K);
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                      [01;31m[K|[m[K
+      |                                      [01;31m[Ktimeval*[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:50:32:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint modbus_set_response_timeout(modbus_t*, uint32_t, uint32_t)[m[K’
+   50 |     [01;31m[Kmodbus_set_response_timeout(ctx, &response_timeout)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23[m[K,
+                 from [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1[m[K:
+[01m[K/usr/local/include/modbus/modbus.h:197:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  197 | [01;36m[Kmodbus_set_response_timeout[m[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:68:20:[m[K [01;31m[Kerror: [m[K‘[01m[KpdMS_TO_TICKS[m[K’ was not declared in this scope
+   68 |         vTaskDelay([01;31m[KpdMS_TO_TICKS[m[K(1000));  // Wait for 1 second before retrying
+      |                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[KvTaskDelay[m[K’ was not declared in this scope
+   68 |         [01;31m[KvTaskDelay[m[K(pdMS_TO_TICKS(1000));  // Wait for 1 second before retrying
+      |         [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

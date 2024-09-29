@@ -1,0 +1,34 @@
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K In constructor ‘[01m[KRos2Comm::Ros2Comm()[m[K’:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:34:38:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Ktimeval*[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   34 |     modbus_set_response_timeout(ctx, [01;31m[K&response_timeout[m[K);
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                      [01;31m[K|[m[K
+      |                                      [01;31m[Ktimeval*[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:34:32:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint modbus_set_response_timeout(modbus_t*, uint32_t, uint32_t)[m[K’
+   34 |     [01;31m[Kmodbus_set_response_timeout(ctx, &response_timeout)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23[m[K,
+                 from [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1[m[K:
+[01m[K/usr/local/include/modbus/modbus.h:197:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  197 | [01;36m[Kmodbus_set_response_timeout[m[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:39:34:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Ktimeval*[m[K’ to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   39 |     modbus_set_byte_timeout(ctx, [01;31m[K&byte_timeout[m[K);
+      |                                  [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                  [01;31m[K|[m[K
+      |                                  [01;31m[Ktimeval*[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:39:28:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kint modbus_set_byte_timeout(modbus_t*, uint32_t, uint32_t)[m[K’
+   39 |     [01;31m[Kmodbus_set_byte_timeout(ctx, &byte_timeout)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/frank/thesis_ws/bms_gui/src/include/bms_gui/ros2comm.h:23[m[K,
+                 from [01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:1[m[K:
+[01m[K/usr/local/include/modbus/modbus.h:201:16:[m[K [01;36m[Knote: [m[Kdeclared here
+  201 | MODBUS_API int [01;36m[Kmodbus_set_byte_timeout[m[K(modbus_t *ctx, uint32_t to_sec, uint32_t to_usec);
+      |                [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:[m[K At global scope:
+[01m[K/home/frank/thesis_ws/bms_gui/src/src/ros2comm.cpp:52:21:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[Kvirtual Ros2Comm::~Ros2Comm()[m[K’
+   52 | Ros2Comm::~Ros2Comm([01;31m[K)[m[K
+      |                     [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/bms_gui.dir/build.make:116: CMakeFiles/bms_gui.dir/src/ros2comm.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bms_gui.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
