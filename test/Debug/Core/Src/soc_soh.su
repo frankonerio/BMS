@@ -1,5 +1,0 @@
-../Core/Src/soc_soh.c:8:6:get_initial_soc	24	static
-../Core/Src/soc_soh.c:60:10:soc_k_update_get	16	static
-../Core/Src/soc_soh.c:89:6:soc_full_correct	4	static
-../Core/Src/soc_soh.c:104:6:soc_empty_correct	4	static
-../Core/Src/soc_soh.c:120:6:get_min_max_vcell	16	static
