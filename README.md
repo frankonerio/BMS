@@ -1,5 +1,3 @@
-######################################################################################################
-
 # Battery Management System (BMS) Project
 
 ## Overview
@@ -16,7 +14,7 @@ This project has been developed using the following software and libraries:
 **Author:** fokonkwo@mail.upb.de  
 **Date:** 15.01.2025  
 
-######################################################################################################
+---
 
 ## 1. BMS Directory Structure
 
@@ -61,7 +59,7 @@ This project has been developed using the following software and libraries:
 └── README.md
 ```
 
-######################################################################################################
+---
 
 ## 2. Getting Started
 
@@ -72,7 +70,7 @@ This project has been developed using the following software and libraries:
    - If the build fails, ensure all paths are correctly set up.
    - Check project configurations and resolve any missing dependencies.
 
-######################################################################################################
+---
 
 ## 3. Integrating FreeRTOS
 
@@ -86,7 +84,7 @@ This project has been developed using the following software and libraries:
     ```
 - Ensure `sysmem.c` is **excluded** from the build.
 
-######################################################################################################
+---
 
 ## 4. Integrating SEGGER SystemView
 
@@ -106,7 +104,7 @@ This project has been developed using the following software and libraries:
   "${workspace_loc:/${ProjName}/ThirdParty/SEGGER/OS}"
   ```
 
-######################################################################################################
+---
 
 ## 5. Integrating W5500 Ethernet Library
 
@@ -116,7 +114,7 @@ This project has been developed using the following software and libraries:
   #define _WIZCHIP_ W5500
   ```
 
-######################################################################################################
+---
 
 ## 6. ROS 2 Host Node and BMS GUI
 
@@ -126,4 +124,5 @@ This project has been developed using the following software and libraries:
   - Edit `mainwindow.ui` as needed.
   - Rebuild the ROS 2 node.
 
-######################################################################################################
+---
+## 7. Hardware
