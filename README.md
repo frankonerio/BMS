@@ -126,3 +126,6 @@ This project has been developed using the following software and libraries:
 
 ---
 ## 7. Hardware
+![BMS_Controller](KiCAD/controller_front.jpg)
+![BMS_AFE](KiCAD/afe_front.png)
+![System_Under_Test](KiCAD/SUT.jpg)
